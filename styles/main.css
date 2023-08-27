@@ -1,0 +1,23 @@
+@import url("./typography.css"); 
+@import url("./components.css"); 
+@import url("./owl.carousel.min.css"); 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #000;
+  overflow-x: hidden;
+}
+
+ul {
+  list-style: none;
+}
+
+.layout {
+  margin: 0 auto;
+  position: relative;
+  max-width: 1160px;
+}/*# sourceMappingURL=main.css.map */

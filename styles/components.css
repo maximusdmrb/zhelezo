@@ -1,0 +1,180 @@
+.owl-nav,
+.owl-dots {
+  display: none;
+}
+
+.cbtn,
+button {
+  cursor: pointer;
+  border-radius: 1.875rem;
+  background: #faff00;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  padding: 1rem 3.19rem;
+  text-decoration: none;
+  color: #000;
+}
+
+.cbtn.small {
+  padding: 0.38rem 2rem;
+}
+
+header {
+  padding: 2.5em 0;
+  position: absolute;
+  width: 100%;
+  display: flex;
+  top: 0;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+nav ul li {
+  margin-right: 15px;
+}
+
+.preview {
+  height: 100vh;
+  background: linear-gradient(rgb(0, 0, 0), transparent), linear-gradient(transparent, rgb(0, 0, 0)), url("../assets/gallery/0.jpg") no-repeat center center;
+  background-size: cover;
+}
+.preview .layout {
+  height: 100%;
+  display: flex;
+  position: relative;
+  align-items: center;
+  width: 100%;
+}
+.preview .layout .title {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 3rem;
+}
+
+.layout .about {
+  margin-top: 14rem;
+}
+.layout .about .gallery {
+  max-width: 600px;
+}
+.layout .about .gallery .owl-stage-outer {
+  border-radius: 0.625rem;
+}
+.layout .about .gallery .owl-gav {
+  display: flex;
+  justify-content: end;
+  margin-top: 1rem;
+}
+.layout .about .gallery .owl-gav img {
+  cursor: pointer;
+}
+.layout .advantages {
+  margin-top: 10rem;
+}
+.layout .advantages h2 {
+  text-align: center;
+}
+.layout .advantages .advantages-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+  align-items: stretch;
+}
+.layout .advantages .advantages-list-item {
+  max-width: 100%;
+  background: #222;
+  color: #fff;
+  letter-spacing: 1px;
+  border-radius: 1.5rem;
+  overflow: hidden;
+}
+.layout .advantages .advantages-list-item .metre {
+  background: #faff00;
+  display: block;
+  border-radius: 0.5rem;
+  padding: 5px 10px;
+  margin-top: 1rem;
+  width: -moz-max-content;
+  width: max-content;
+  color: #000;
+}
+.layout .advantages .advantages-list-item h3 {
+  padding: 1.37em;
+  letter-spacing: 2px;
+  margin: 0;
+}
+.layout .advantages .advantages-list-item ul {
+  padding: 1.44em;
+  font-size: 0.9em;
+  font-style: normal;
+  margin: 0;
+  font-weight: 100;
+  line-height: normal;
+}
+.layout .advantages .advantages-list-item ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.875rem;
+}
+.layout .advantages .advantages-list-item ul li img {
+  margin-right: 10px;
+}
+.layout .price {
+  margin-top: 10rem;
+}
+.layout .price .owl-stage-outer {
+  overflow: visible !important;
+}
+.layout .price-card {
+  padding: 1.5rem;
+  background: #fff;
+  border-radius: 1.5rem;
+  cursor: pointer;
+}
+.layout .price-card h5 {
+  margin: 0;
+}
+.layout .price-card p {
+  color: #777;
+}
+.layout .price-card.active {
+  background: #faff00;
+}
+.layout .price-card.active p {
+  color: #333;
+}
+.layout .trainers {
+  margin-top: 14rem;
+}
+.layout .trainers-list {
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: auto auto auto auto;
+  gap: 2rem;
+}
+.layout .trainers-list-item {
+  cursor: pointer;
+  border-radius: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.12rem;
+  border: 1px solid #000;
+  background: #222;
+  padding: 1.38em 1.12em;
+  align-items: center;
+  color: #fff;
+}
+.layout .trainers-list-item img {
+  border-radius: 1.25rem;
+  max-width: 13.875rem;
+  pointer-events: none;
+}
+.layout .contacts {
+  margin-top: 14rem;
+}/*# sourceMappingURL=components.css.map */
