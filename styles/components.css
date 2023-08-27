@@ -177,4 +177,8 @@ nav ul li {
 }
 .layout .contacts {
   margin-top: 14rem;
+}
+
+img {
+  pointer-events: none;
 }/*# sourceMappingURL=components.css.map */
