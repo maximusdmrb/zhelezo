@@ -45,7 +45,7 @@ for (const trainer of trainers) {
   boxTrainers.insertAdjacentHTML(
     "beforeend",
     `<div><div class="trainers-list-item" data-bs-toggle="modal" data-bs-target="#modal${trainer.src.replace(".", "")}" onclick="showTrainderCard('${trainer.name}');">
-    <img src="/assets/trainers/${trainer.src}" alt="" srcset="" />
+    <img src="./assets/trainers/${trainer.src}" alt="" srcset="" />
     <h3>${trainer.name}</h3>
     <buttun class="cbtn small">Запись</buttun>
   </div></div>`
