@@ -5,6 +5,7 @@ $(document).ready(function () {
     lazyLoad: true,
     center: true,
     loop: true,
+    autoplay: true,
     lazyLoadEager: 1,
   });
   $(".customNextBtn").click(function () {
