@@ -126,11 +126,26 @@ nav ul {
     }
   }
   .price {
+    /* .owl-stage::before {
+      content: "";
+      position: absolute;
+      width: 90%;
+      top: calc(50% - 4px);
+      height: 4px;
+      background: #ccc;
+    } */
     .owl-stage-outer {
       overflow: visible !important;
     }
+    .owl-carousel {
+      margin-bottom: 2rem;
+    }
     margin-top: 10rem;
     &-card {
+      transition: all 0.3s;
+      &:hover {
+        transform: scale(1.05);
+      }
       padding: 1.5rem;
       background: #fff;
       border-radius: 1.5rem;
@@ -145,6 +160,25 @@ nav ul {
         background: $main-color;
         p {
           color: #333;
+        }
+      }
+      &.one {
+        background: #222;
+
+        * {
+          color: #fff;
+        }
+        p {
+          color: #ccc;
+        }
+      }
+      &.discount {
+        background: #e83b3b;
+        * {
+          color: #fff;
+        }
+        p {
+          color: #eee;
         }
       }
     }

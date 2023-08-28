@@ -60,16 +60,20 @@
               <div class="owl-carousel owl-carousel-gallery owl-theme owl-loaded">
                 <div class="owl-stage-outer">
                   <div class="owl-stage">
-                    <div class="owl-item"><img src="./assets/gallery/1.jpg" alt="" srcset="" /></div>
-                    <div class="owl-item"><img src="./assets/gallery/2.jpg" alt="" srcset="" /></div>
-                    <div class="owl-item"><img src="./assets/gallery/3.jpg" alt="" srcset="" /></div>
-                    <div class="owl-item"><img src="./assets/gallery/4.jpg" alt="" srcset="" /></div>
-                    <div class="owl-item"><img src="./assets/gallery/5.jpg" alt="" srcset="" /></div>
-                    <div class="owl-item"><img src="./assets/gallery/6.jpg" alt="" srcset="" /></div>
-                    <div class="owl-item"><img src="./assets/gallery/7.jpg" alt="" srcset="" /></div>
-                    <div class="owl-item"><img src="./assets/gallery/8.jpg" alt="" srcset="" /></div>
-                    <div class="owl-item"><img src="./assets/gallery/9.jpg" alt="" srcset="" /></div>
-                    <div class="owl-item"><img src="./assets/gallery/0.jpg" alt="" srcset="" /></div>
+                    <div class="owl-item"><img class="owl-lazy" data-src="./assets/gallery/1.jpg" alt="" srcset="" /></div>
+                    <div class="owl-item"><img class="owl-lazy" data-src="./assets/gallery/2.jpg" alt="" srcset="" /></div>
+                    <div class="owl-item"><img class="owl-lazy" data-src="./assets/gallery/3.jpg" alt="" srcset="" /></div>
+                    <div class="owl-item"><img class="owl-lazy" data-src="./assets/gallery/4.jpg" alt="" srcset="" /></div>
+                    <div class="owl-item"><img class="owl-lazy" data-src="./assets/gallery/5.jpg" alt="" srcset="" /></div>
+                    <div class="owl-item"><img class="owl-lazy" data-src="./assets/gallery/6.jpg" alt="" srcset="" /></div>
+                    <div class="owl-item"><img class="owl-lazy" data-src="./assets/gallery/7.jpg" alt="" srcset="" /></div>
+                    <div class="owl-item"><img class="owl-lazy" data-src="./assets/gallery/8.jpg" alt="" srcset="" /></div>
+                    <div class="owl-item"><img class="owl-lazy" data-src="./assets/gallery/9.jpg" alt="" srcset="" /></div>
+                    <div class="owl-item"><img class="owl-lazy" data-src="./assets/gallery/10.jpg" alt="" srcset="" /></div>
+                    <div class="owl-item"><img class="owl-lazy" data-src="./assets/gallery/11.jpg" alt="" srcset="" /></div>
+                    <div class="owl-item"><img class="owl-lazy" data-src="./assets/gallery/12.jpg" alt="" srcset="" /></div>
+                    <div class="owl-item"><img class="owl-lazy" data-src="./assets/gallery/13.jpg" alt="" srcset="" /></div>
+                    <div class="owl-item"><img class="owl-lazy" data-src="./assets/gallery/0.jpg" alt="" srcset="" /></div>
                   </div>
                 </div>
                 <div class="owl-gav">
@@ -128,17 +132,27 @@
           </div>
         </div>
         <div class="price">
-          <h2>Прайс</h2>
-          <div class="owl-carousel owl-carousel-price owl-theme owl-loaded">
+          <h2>Клубные карты</h2>
+          <div class="owl-carousel owl-carousel-unlimited owl-theme owl-loaded">
             <div class="owl-stage-outer">
-              <div class="owl-stage prices-carousel"></div>
+              <div class="owl-stage prices-unlimited"></div>
+            </div>
+          </div>
+          <div class="owl-carousel owl-carousel-daytime owl-theme owl-loaded">
+            <div class="owl-stage-outer">
+              <div class="owl-stage prices-daytime"></div>
+            </div>
+          </div>
+          <div class="owl-carousel owl-carousel-childlike owl-theme owl-loaded">
+            <div class="owl-stage-outer">
+              <div class="owl-stage prices-childlike"></div>
             </div>
           </div>
         </div>
-        <div class="trainers">
+        <!--  <div class="trainers">
           <h2>Тренерский состав</h2>
           <div class="trainers-list"></div>
-        </div>
+        </div> -->
       </main>
       <footer>
         <div class="contacts">
@@ -151,7 +165,6 @@
     <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
     <script src="./js/owl.carousel.min.js"></script>
     <script src="./js/carousel.js"></script>
-    <script src="./js/renderTrainers.js"></script>
     <script type="module" src="./js/renderPrices.js"></script>
   </body>
 </html>

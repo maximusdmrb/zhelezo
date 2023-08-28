@@ -126,16 +126,31 @@ nav ul li {
   margin-right: 10px;
 }
 .layout .price {
+  /* .owl-stage::before {
+    content: "";
+    position: absolute;
+    width: 90%;
+    top: calc(50% - 4px);
+    height: 4px;
+    background: #ccc;
+  } */
   margin-top: 10rem;
 }
 .layout .price .owl-stage-outer {
   overflow: visible !important;
 }
+.layout .price .owl-carousel {
+  margin-bottom: 2rem;
+}
 .layout .price-card {
+  transition: all 0.3s;
   padding: 1.5rem;
   background: #fff;
   border-radius: 1.5rem;
   cursor: pointer;
+}
+.layout .price-card:hover {
+  transform: scale(1.05);
 }
 .layout .price-card h5 {
   margin: 0;
@@ -148,6 +163,24 @@ nav ul li {
 }
 .layout .price-card.active p {
   color: #333;
+}
+.layout .price-card.one {
+  background: #222;
+}
+.layout .price-card.one * {
+  color: #fff;
+}
+.layout .price-card.one p {
+  color: #ccc;
+}
+.layout .price-card.discount {
+  background: #e83b3b;
+}
+.layout .price-card.discount * {
+  color: #fff;
+}
+.layout .price-card.discount p {
+  color: #eee;
 }
 .layout .trainers {
   margin-top: 14rem;

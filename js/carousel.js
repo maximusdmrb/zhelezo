@@ -2,9 +2,10 @@ $(document).ready(function () {
   let owl = $(".owl-carousel-gallery");
   owl.owlCarousel({
     items: 1,
+    lazyLoad: true,
     center: true,
     loop: true,
-    lazyLoad: true,
+    lazyLoadEager: 1,
   });
   $(".customNextBtn").click(function () {
     owl.trigger("next.owl.carousel");
@@ -16,11 +17,16 @@ $(document).ready(function () {
     owl.trigger("prev.owl.carousel", [300]);
   });
 
-  let priceCarousel = $(".owl-carousel-price");
-  priceCarousel.owlCarousel({
+  const option = {
     items: 5,
     nav: false,
     margin: 16,
     dots: false,
-  });
+  };
+  let priceUnlimited = $(".owl-carousel-unlimited");
+  let priceDaytime = $(".owl-carousel-daytime");
+  let priceChildlike = $(".owl-carousel-childlike");
+  priceUnlimited.owlCarousel(option);
+  priceDaytime.owlCarousel(option);
+  priceChildlike.owlCarousel(option);
 });
