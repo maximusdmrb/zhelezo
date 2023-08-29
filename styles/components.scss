@@ -50,6 +50,9 @@ nav ul {
       flex-direction: column;
       align-items: start;
       gap: 3rem;
+      .asyncText {
+        height: 129px;
+      }
     }
   }
 }
@@ -67,7 +70,8 @@ nav ul {
         display: flex;
         justify-content: end;
         margin-top: 1rem;
-        img {
+        .customPrevBtn,
+        .customNextBtn {
           cursor: pointer;
         }
       }
@@ -83,6 +87,12 @@ nav ul {
       grid-template-columns: 1fr 1fr 1fr;
       gap: 2rem;
       align-items: stretch;
+      @media screen and (max-width: 1060px) {
+        grid-template-columns: 1fr 1fr;
+      }
+      @media screen and (max-width: 721px) {
+        grid-template-columns: 1fr;
+      }
       &-item {
         max-width: 100%;
         background: #222;
@@ -135,17 +145,15 @@ nav ul {
       background: #ccc;
     } */
     .owl-stage-outer {
-      overflow: visible !important;
+      overflow: visible;
     }
     .owl-carousel {
       margin-bottom: 2rem;
     }
     margin-top: 10rem;
     &-card {
-      transition: all 0.3s;
-      &:hover {
-        transform: scale(1.05);
-      }
+      width: 219.2px;
+
       padding: 1.5rem;
       background: #fff;
       border-radius: 1.5rem;
@@ -184,32 +192,26 @@ nav ul {
     }
   }
 
-  .trainers {
+  .individual {
     margin-top: 14rem;
-    &-list {
-      display: grid;
-      justify-content: space-between;
-      grid-template-columns: auto auto auto auto;
-      gap: 2rem;
-      &-item {
-        cursor: pointer;
-        border-radius: 1.25rem;
-        display: flex;
-        flex-direction: column;
-        gap: 1.12rem;
-        border: 1px solid #000;
-        background: #222;
-        padding: 1.38em 1.12em;
-        align-items: center;
-        color: #fff;
-        img {
-          border-radius: 1.25rem;
-          max-width: 13.875rem;
-          pointer-events: none;
-        }
+    .circle-gradient {
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: radial-gradient(circle at 0, transparent 50%, #000 75%);
       }
     }
+    img {
+      width: 100%;
+    }
   }
+
   .contacts {
     margin-top: 14rem;
   }

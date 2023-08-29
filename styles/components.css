@@ -56,6 +56,9 @@ nav ul li {
   align-items: start;
   gap: 3rem;
 }
+.preview .layout .title .asyncText {
+  height: 129px;
+}
 
 .layout .about {
   margin-top: 14rem;
@@ -71,7 +74,8 @@ nav ul li {
   justify-content: end;
   margin-top: 1rem;
 }
-.layout .about .gallery .owl-gav img {
+.layout .about .gallery .owl-gav .customPrevBtn,
+.layout .about .gallery .owl-gav .customNextBtn {
   cursor: pointer;
 }
 .layout .advantages {
@@ -85,6 +89,16 @@ nav ul li {
   grid-template-columns: 1fr 1fr 1fr;
   gap: 2rem;
   align-items: stretch;
+}
+@media screen and (max-width: 1060px) {
+  .layout .advantages .advantages-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 721px) {
+  .layout .advantages .advantages-list {
+    grid-template-columns: 1fr;
+  }
 }
 .layout .advantages .advantages-list-item {
   max-width: 100%;
@@ -137,20 +151,17 @@ nav ul li {
   margin-top: 10rem;
 }
 .layout .price .owl-stage-outer {
-  overflow: visible !important;
+  overflow: visible;
 }
 .layout .price .owl-carousel {
   margin-bottom: 2rem;
 }
 .layout .price-card {
-  transition: all 0.3s;
+  width: 219.2px;
   padding: 1.5rem;
   background: #fff;
   border-radius: 1.5rem;
   cursor: pointer;
-}
-.layout .price-card:hover {
-  transform: scale(1.05);
 }
 .layout .price-card h5 {
   margin: 0;
@@ -182,31 +193,23 @@ nav ul li {
 .layout .price-card.discount p {
   color: #eee;
 }
-.layout .trainers {
+.layout .individual {
   margin-top: 14rem;
 }
-.layout .trainers-list {
-  display: grid;
-  justify-content: space-between;
-  grid-template-columns: auto auto auto auto;
-  gap: 2rem;
+.layout .individual .circle-gradient {
+  position: relative;
 }
-.layout .trainers-list-item {
-  cursor: pointer;
-  border-radius: 1.25rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1.12rem;
-  border: 1px solid #000;
-  background: #222;
-  padding: 1.38em 1.12em;
-  align-items: center;
-  color: #fff;
+.layout .individual .circle-gradient::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: radial-gradient(circle at 0, transparent 50%, #000 75%);
 }
-.layout .trainers-list-item img {
-  border-radius: 1.25rem;
-  max-width: 13.875rem;
-  pointer-events: none;
+.layout .individual img {
+  width: 100%;
 }
 .layout .contacts {
   margin-top: 14rem;

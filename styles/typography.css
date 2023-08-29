@@ -6,6 +6,11 @@
   font-family: "RussoOne";
   src: url("./fonts/RussoOne-Regular.ttf");
 }
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 12px;
+  }
+}
 * {
   letter-spacing: 1px;
   font-family: "RussoOne";

@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fe</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="https://unpkg.com/flexboxgrid2@7.1.0/flexboxgrid2.css" />
     <link rel="stylesheet" href="./styles/main.css" />
   </head>
   <body>
@@ -33,7 +32,7 @@
           <h1>Тренажерный зал - «ЖЕЛЕЗО»</h1>
           <div class="asyncText"></div>
           <a class="cbtn" href="tel:79687338393" style="font-size: 1.5rem"
-            >+7 (968) 733-83-93
+            >+7 (985) 343-33-57
             <p style="margin: 0; padding: 0; color: inherit">Открыты с 08:00 до 23:00</p>
           </a>
         </div>
@@ -42,7 +41,7 @@
     <div class="layout">
       <main>
         <div class="about">
-          <div class="row between-xs">
+          <div class="row justify-content-between">
             <div class="col-md-5">
               <h2>О клубе</h2>
               <p>Спортивная фигура располагает к Вам людей; безупречное здоровье позволяет жить полной и активной жизнью; участие и победы в соревнованиях поднимают вашу самооценку и придают уверенности в себе!</p>
@@ -149,10 +148,15 @@
             </div>
           </div>
         </div>
-        <!--  <div class="trainers">
-          <h2>Тренерский состав</h2>
-          <div class="trainers-list"></div>
-        </div> -->
+        <div class="individual">
+          <div class="row">
+            <div class="col-md-6">
+              <h2>Тренировки</h2>
+              <div class="accordion" id="accordion"></div>
+            </div>
+            <div class="col-md-6 circle-gradient"><img class="trainer-img" src="./assets/trainers/Sergey.jpg" alt="" srcset="" /></div>
+          </div>
+        </div>
       </main>
       <footer>
         <div class="contacts">
@@ -166,5 +170,6 @@
     <script src="./js/owl.carousel.min.js"></script>
     <script src="./js/carousel.js"></script>
     <script type="module" src="./js/renderPrices.js"></script>
+    <script type="module" src="./js/renderTraining.js"></script>
   </body>
 </html>

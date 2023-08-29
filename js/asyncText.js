@@ -60,7 +60,7 @@ class TextScramble {
 // Example
 // ——————————————————————————————————————————————————
 
-const phrases = ["Первое занятие бесплатно", "Тренажерный зал", "Зона единоборств", "Просторный зал групповых занятий", "Правильные тренажеры - лучший результат", "Лучшие тренеры города", "Без перерывов и выходных"];
+const phrases = ["Тренажерный зал", "Зона единоборств", "Просторный зал групповых занятий", "Без перерывов и выходных", "Правильные тренажеры - лучший результат", "Лучшие тренеры города"];
 
 const el = document.querySelector(".asyncText");
 const fx = new TextScramble(el);
@@ -68,7 +68,7 @@ const fx = new TextScramble(el);
 let counter = 0;
 const next = () => {
   fx.setText(phrases[counter]).then(() => {
-    setTimeout(next, 2000);
+    setTimeout(next, 2500);
   });
   counter = (counter + 1) % phrases.length;
 };

@@ -19,15 +19,14 @@ $(document).ready(function () {
   });
 
   const option = {
-    items: 5,
     nav: false,
     margin: 16,
     dots: false,
+    autoWidth: true,
+    checkVisible: false,
   };
-  let priceUnlimited = $(".owl-carousel-unlimited");
-  let priceDaytime = $(".owl-carousel-daytime");
-  let priceChildlike = $(".owl-carousel-childlike");
-  priceUnlimited.owlCarousel(option);
-  priceDaytime.owlCarousel(option);
-  priceChildlike.owlCarousel(option);
+
+  $(".owl-carousel-unlimited").owlCarousel(option);
+  $(".owl-carousel-daytime").owlCarousel(option);
+  $(".owl-carousel-childlike").owlCarousel(option);
 });

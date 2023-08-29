@@ -1,0 +1,30 @@
+.accordion {
+  background: none;
+}
+.accordion-item {
+  border-radius: 0.8rem !important;
+  transition: all 0.3s ease;
+  background: #fff;
+  color: #444;
+  letter-spacing: 3px;
+  padding: 1rem 2rem;
+  border: 0;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+.accordion-item ul {
+  margin: 0;
+  padding: 0;
+}
+.accordion-item.show {
+  background: #fff;
+  color: #444;
+}
+.accordion-item.collapsed {
+  background: #222;
+  color: #fff;
+}
+.accordion-item .accordion-body {
+  padding-left: 0;
+  padding-right: 0;
+}/*# sourceMappingURL=customAccordion.css.map */
