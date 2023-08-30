@@ -8,8 +8,14 @@
   box-sizing: border-box;
 }
 
+html {
+  width: 100%;
+  overflow-x: hidden;
+}
+
 body {
   background: #000;
+  width: 100%;
   overflow-x: hidden;
 }
 
@@ -23,8 +29,17 @@ ul {
   max-width: calc(1160px + 4rem);
   padding: 0 2rem;
 }
-@media screen and (max-width: 1651px) {
-  .layout {
-    overflow: hidden;
+
+.section {
+  margin-top: 14rem;
+}
+@media screen and (max-width: 1000px) {
+  .section {
+    margin-top: 10rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .section {
+    margin-top: 5rem;
   }
 }/*# sourceMappingURL=main.css.map */

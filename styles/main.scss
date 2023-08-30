@@ -11,8 +11,13 @@ $layout-width: calc(1160px + 2rem * 2);
   padding: 0;
   box-sizing: border-box;
 }
+html {
+  width: 100%;
+  overflow-x: hidden;
+}
 body {
   background: #000;
+  width: 100%;
   overflow-x: hidden;
 }
 ul {
@@ -23,7 +28,13 @@ ul {
   position: relative;
   max-width: $layout-width;
   padding: 0 2rem;
-  @media screen and (max-width: 1651px) {
-    overflow: hidden;
+}
+.section {
+  margin-top: 14rem;
+  @media screen and (max-width: 1000px) {
+    margin-top: 10rem;
+  }
+  @media screen and (max-width: 600px) {
+    margin-top: 5rem;
   }
 }

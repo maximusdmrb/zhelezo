@@ -19,11 +19,12 @@ button {
 }
 
 header {
-  padding: 2.5em 0;
+  padding: 2.5em 2rem;
   position: absolute;
   width: 100%;
   display: flex;
   top: 0;
+  left: 0;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
@@ -48,6 +49,7 @@ nav ul li {
   display: flex;
   position: relative;
   align-items: center;
+  min-height: 600px;
   width: 100%;
 }
 .preview .layout .title {
@@ -60,9 +62,6 @@ nav ul li {
   height: 129px;
 }
 
-.layout .about {
-  margin-top: 14rem;
-}
 .layout .about .gallery {
   max-width: 600px;
 }
@@ -78,9 +77,6 @@ nav ul li {
 .layout .about .gallery .owl-gav .customNextBtn {
   cursor: pointer;
 }
-.layout .advantages {
-  margin-top: 10rem;
-}
 .layout .advantages h2 {
   text-align: center;
 }
@@ -90,7 +86,7 @@ nav ul li {
   gap: 2rem;
   align-items: stretch;
 }
-@media screen and (max-width: 1060px) {
+@media screen and (max-width: 1062px) {
   .layout .advantages .advantages-list {
     grid-template-columns: 1fr 1fr;
   }
@@ -148,7 +144,6 @@ nav ul li {
     height: 4px;
     background: #ccc;
   } */
-  margin-top: 10rem;
 }
 .layout .price .owl-stage-outer {
   overflow: visible;
@@ -193,8 +188,31 @@ nav ul li {
 .layout .price-card.discount p {
   color: #eee;
 }
-.layout .individual {
+.layout .trainers {
   margin-top: 14rem;
+}
+.layout .trainers-list {
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: auto auto auto auto;
+  gap: 2rem;
+}
+.layout .trainers-list-item {
+  cursor: pointer;
+  border-radius: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.12rem;
+  border: 1px solid #000;
+  background: #222;
+  padding: 1.38em 1.12em;
+  align-items: center;
+  color: #fff;
+}
+.layout .trainers-list-item img {
+  border-radius: 1.25rem;
+  max-width: 13.875rem;
+  pointer-events: none;
 }
 .layout .individual .circle-gradient {
   position: relative;
@@ -211,10 +229,6 @@ nav ul li {
 .layout .individual img {
   width: 100%;
 }
-.layout .contacts {
-  margin-top: 14rem;
-}
-
 img {
   pointer-events: none;
 }/*# sourceMappingURL=components.css.map */

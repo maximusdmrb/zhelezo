@@ -18,11 +18,12 @@ button {
   padding: 0.38rem 2rem;
 }
 header {
-  padding: 2.5em 0;
+  padding: 2.5em 2rem;
   position: absolute;
   width: 100%;
   display: flex;
   top: 0;
+  left: 0;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
@@ -44,6 +45,7 @@ nav ul {
     display: flex;
     position: relative;
     align-items: center;
+    min-height: 600px;
     width: 100%;
     .title {
       display: flex;
@@ -58,8 +60,6 @@ nav ul {
 }
 .layout {
   .about {
-    margin-top: 14rem;
-
     .gallery {
       max-width: 600px;
 
@@ -78,7 +78,6 @@ nav ul {
     }
   }
   .advantages {
-    margin-top: 10rem;
     h2 {
       text-align: center;
     }
@@ -87,7 +86,7 @@ nav ul {
       grid-template-columns: 1fr 1fr 1fr;
       gap: 2rem;
       align-items: stretch;
-      @media screen and (max-width: 1060px) {
+      @media screen and (max-width: 1062px) {
         grid-template-columns: 1fr 1fr;
       }
       @media screen and (max-width: 721px) {
@@ -150,7 +149,6 @@ nav ul {
     .owl-carousel {
       margin-bottom: 2rem;
     }
-    margin-top: 10rem;
     &-card {
       width: 219.2px;
 
@@ -191,9 +189,33 @@ nav ul {
       }
     }
   }
-
-  .individual {
+  .trainers {
     margin-top: 14rem;
+    &-list {
+      display: grid;
+      justify-content: space-between;
+      grid-template-columns: auto auto auto auto;
+      gap: 2rem;
+      &-item {
+        cursor: pointer;
+        border-radius: 1.25rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.12rem;
+        border: 1px solid #000;
+        background: #222;
+        padding: 1.38em 1.12em;
+        align-items: center;
+        color: #fff;
+        img {
+          border-radius: 1.25rem;
+          max-width: 13.875rem;
+          pointer-events: none;
+        }
+      }
+    }
+  }
+  .individual {
     .circle-gradient {
       position: relative;
 
@@ -213,7 +235,6 @@ nav ul {
   }
 
   .contacts {
-    margin-top: 14rem;
   }
 }
 img {
