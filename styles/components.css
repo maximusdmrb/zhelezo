@@ -30,6 +30,11 @@ header {
   justify-content: space-between;
 }
 
+nav .nav-toggle-btn {
+  display: none;
+  color: #fff;
+  cursor: pointer;
+}
 nav ul {
   display: flex;
   flex-direction: row;
@@ -37,6 +42,28 @@ nav ul {
 }
 nav ul li {
   margin-right: 15px;
+}
+@media screen and (max-width: 800px) {
+  nav ul {
+    transition: all 0.5s ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    display: block;
+    background: #222;
+    padding: 0;
+  }
+  nav ul.hide {
+    transform: translate(0, -100%);
+  }
+  nav ul li {
+    text-align: center;
+    padding: 10px;
+  }
+  nav .nav-toggle-btn {
+    display: block;
+  }
 }
 
 .preview {

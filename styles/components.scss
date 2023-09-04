@@ -28,17 +28,47 @@ header {
   align-items: center;
   justify-content: space-between;
 }
-nav ul {
-  display: flex;
-  flex-direction: row;
-  list-style: none;
-  li {
-    margin-right: 15px;
+nav {
+  .nav-toggle-btn {
+    display: none;
+    color: #fff;
+    cursor: pointer;
+  }
+  ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    li {
+      margin-right: 15px;
+    }
+  }
+  @media screen and (max-width: 800px) {
+    ul {
+      transition: all 0.5s ease-in-out;
+      &.hide {
+        transform: translate(0, -100%);
+      }
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      display: block;
+      background: #222;
+      padding: 0;
+      li {
+        text-align: center;
+        padding: 10px;
+      }
+    }
+    .nav-toggle-btn {
+      display: block;
+    }
   }
 }
 .preview {
   height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 1), transparent), linear-gradient(transparent, rgba(0, 0, 0, 1)), url("../assets/gallery/0.jpg") no-repeat center center;
+  background: linear-gradient(rgba(0, 0, 0, 1), transparent), linear-gradient(transparent, rgba(0, 0, 0, 1)),
+    url("../assets/gallery/0.jpg") no-repeat center center;
   background-size: cover;
   .layout {
     height: 100%;

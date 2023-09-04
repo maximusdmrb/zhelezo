@@ -50,7 +50,8 @@
             <!-- <img src="assets/logo2.png" height="60" alt="" srcset="" /> -->
           </div>
           <nav>
-            <ul>
+            <div class="nav-toggle-btn">Меню</div>
+            <ul class="hide">
               <li><a class="nav-text" href="#">О клубе</a></li>
               <li><a class="nav-text" href="#">Услуги</a></li>
               <li><a class="nav-text" href="#">Фотогалерея</a></li>
@@ -75,10 +76,15 @@
         <div class="row justify-content-between">
           <div class="col-lg-5">
             <h2>О клубе</h2>
-            <p>Спортивная фигура располагает к Вам людей; безупречное здоровье позволяет жить полной и активной жизнью; участие и победы в соревнованиях поднимают вашу самооценку и придают уверенности в себе!</p>
             <p>
-              Тренажерный зал «ЖЕЛЕЗО» рад приветствовать каждого, кто ценит свое здоровье, свою красоту и свое время. Идеальная физическая форма – показатель качества вашей жизни. Настало время прислушаться к собственному организму,
-              привести в порядок мышцы, избавиться от лишнего веса, стать стройным, подтянутым, а главное – здоровым.
+              Спортивная фигура располагает к Вам людей; безупречное здоровье позволяет жить полной и активной жизнью;
+              участие и победы в соревнованиях поднимают вашу самооценку и придают уверенности в себе!
+            </p>
+            <p>
+              Тренажерный зал «ЖЕЛЕЗО» рад приветствовать каждого, кто ценит свое здоровье, свою красоту и свое время.
+              Идеальная физическая форма – показатель качества вашей жизни. Настало время прислушаться к собственному
+              организму, привести в порядок мышцы, избавиться от лишнего веса, стать стройным, подтянутым, а главное –
+              здоровым.
             </p>
             <!-- <p>
               Спорт – это дорога в счастливую, успешную жизнь. Это уникальная возможность яркими красками раскрасить серые будни, получить массу позитивных эмоций и наконец-то начать гордиться собой! Оборудование в нашем тренажерном зале
@@ -90,24 +96,54 @@
             <div class="owl-carousel owl-carousel-gallery owl-theme owl-loaded">
               <div class="owl-stage-outer">
                 <div class="owl-stage">
-                  <div class="owl-item"><img class="owl-lazy" data-src="./assets/gallery/1.jpg" alt="" srcset="" /></div>
-                  <div class="owl-item"><img class="owl-lazy" data-src="./assets/gallery/2.jpg" alt="" srcset="" /></div>
-                  <div class="owl-item"><img class="owl-lazy" data-src="./assets/gallery/3.jpg" alt="" srcset="" /></div>
-                  <div class="owl-item"><img class="owl-lazy" data-src="./assets/gallery/4.jpg" alt="" srcset="" /></div>
-                  <div class="owl-item"><img class="owl-lazy" data-src="./assets/gallery/5.jpg" alt="" srcset="" /></div>
-                  <div class="owl-item"><img class="owl-lazy" data-src="./assets/gallery/6.jpg" alt="" srcset="" /></div>
-                  <div class="owl-item"><img class="owl-lazy" data-src="./assets/gallery/7.jpg" alt="" srcset="" /></div>
-                  <div class="owl-item"><img class="owl-lazy" data-src="./assets/gallery/8.jpg" alt="" srcset="" /></div>
-                  <div class="owl-item"><img class="owl-lazy" data-src="./assets/gallery/9.jpg" alt="" srcset="" /></div>
-                  <div class="owl-item"><img class="owl-lazy" data-src="./assets/gallery/10.jpg" alt="" srcset="" /></div>
-                  <div class="owl-item"><img class="owl-lazy" data-src="./assets/gallery/11.jpg" alt="" srcset="" /></div>
-                  <div class="owl-item"><img class="owl-lazy" data-src="./assets/gallery/12.jpg" alt="" srcset="" /></div>
-                  <div class="owl-item"><img class="owl-lazy" data-src="./assets/gallery/13.jpg" alt="" srcset="" /></div>
-                  <div class="owl-item"><img class="owl-lazy" data-src="./assets/gallery/0.jpg" alt="" srcset="" /></div>
+                  <div class="owl-item">
+                    <img class="owl-lazy" data-src="./assets/gallery/1.jpg" alt="" srcset="" />
+                  </div>
+                  <div class="owl-item">
+                    <img class="owl-lazy" data-src="./assets/gallery/2.jpg" alt="" srcset="" />
+                  </div>
+                  <div class="owl-item">
+                    <img class="owl-lazy" data-src="./assets/gallery/3.jpg" alt="" srcset="" />
+                  </div>
+                  <div class="owl-item">
+                    <img class="owl-lazy" data-src="./assets/gallery/4.jpg" alt="" srcset="" />
+                  </div>
+                  <div class="owl-item">
+                    <img class="owl-lazy" data-src="./assets/gallery/5.jpg" alt="" srcset="" />
+                  </div>
+                  <div class="owl-item">
+                    <img class="owl-lazy" data-src="./assets/gallery/6.jpg" alt="" srcset="" />
+                  </div>
+                  <div class="owl-item">
+                    <img class="owl-lazy" data-src="./assets/gallery/7.jpg" alt="" srcset="" />
+                  </div>
+                  <div class="owl-item">
+                    <img class="owl-lazy" data-src="./assets/gallery/8.jpg" alt="" srcset="" />
+                  </div>
+                  <div class="owl-item">
+                    <img class="owl-lazy" data-src="./assets/gallery/9.jpg" alt="" srcset="" />
+                  </div>
+                  <div class="owl-item">
+                    <img class="owl-lazy" data-src="./assets/gallery/10.jpg" alt="" srcset="" />
+                  </div>
+                  <div class="owl-item">
+                    <img class="owl-lazy" data-src="./assets/gallery/11.jpg" alt="" srcset="" />
+                  </div>
+                  <div class="owl-item">
+                    <img class="owl-lazy" data-src="./assets/gallery/12.jpg" alt="" srcset="" />
+                  </div>
+                  <div class="owl-item">
+                    <img class="owl-lazy" data-src="./assets/gallery/13.jpg" alt="" srcset="" />
+                  </div>
+                  <div class="owl-item">
+                    <img class="owl-lazy" data-src="./assets/gallery/0.jpg" alt="" srcset="" />
+                  </div>
                 </div>
               </div>
               <div class="owl-gav">
-                <div class="customPrevBtn" style="transform: rotate(180deg); margin-right: 1rem"><img src="./assets/arrow.svg" alt="" srcset="" /></div>
+                <div class="customPrevBtn" style="transform: rotate(180deg); margin-right: 1rem">
+                  <img src="./assets/arrow.svg" alt="" srcset="" />
+                </div>
                 <div class="customNextBtn"><img src="./assets/arrow.svg" alt="" srcset="" /></div>
               </div>
             </div>
@@ -127,7 +163,10 @@
               <li><img src="./assets/ok.svg" alt="advantages" />1 эллипсоидный тренажер</li>
               <li><img src="./assets/ok.svg" alt="advantages" />3 велотренажера</li>
               <li><img src="./assets/ok.svg" alt="advantages" />Блочные тренажеры (32 единицы оборудования)</li>
-              <li><img src="./assets/ok.svg" alt="advantages" />Зона свободных весов (1500 кг в блинах, гантельный ряд до 50кг, профессиональные грифы)</li>
+              <li>
+                <img src="./assets/ok.svg" alt="advantages" />Зона свободных весов (1500 кг в блинах, гантельный ряд до
+                50кг, профессиональные грифы)
+              </li>
             </ul>
           </div>
           <div class="advantages-list-item">
@@ -189,7 +228,9 @@
             <h2>Тренировки</h2>
             <div class="accordion" id="accordion"></div>
           </div>
-          <div class="col-md-6 circle-gradient"><img class="trainer-img" src="./assets/trainers/Sergey.jpg" alt="" srcset="" /></div>
+          <div class="col-md-6 circle-gradient">
+            <img class="trainer-img" src="./assets/trainers/training.jpg" alt="" srcset="" />
+          </div>
         </div>
       </div>
       <footer>
@@ -200,11 +241,16 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./js/asyncText.js"></script>
-    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.min.js"
+      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+      crossorigin="anonymous"
+    ></script>
     <script src="./js/owl.carousel.min.js"></script>
     <script src="./js/carousel.js"></script>
     <script type="module" src="./js/renderPrices.js"></script>
     <script type="module" src="./js/renderTrainers.js"></script>
     <script type="module" src="./js/renderTraining.js"></script>
+    <script type="module" src="./js/nav.js"></script>
   </body>
 </html>
