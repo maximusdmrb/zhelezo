@@ -6,6 +6,38 @@
     <title>Fe</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="./styles/main.css" />
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=a6e0d918-5ee1-4bc2-9d86-0fe7bb97a683&lang=ru_RU"></script>
+    <script>
+      ymaps.ready(init);
+
+      function init() {
+        var myMap = new ymaps.Map(
+          "map",
+          {
+            center: [56.016048, 37.476757],
+            zoom: 16,
+            controls: [],
+          },
+          {
+            searchControlProvider: "yandex#search",
+          }
+        );
+        var placemark = new ymaps.Placemark(myMap.getCenter(), {
+          // Зададим содержимое заголовка балуна.
+          // balloonContentHeader: '<a href = "#">Рога и копыта</a><br>' + '<span class="description">Сеть кинотеатров</span>',
+          // Зададим содержимое основной части балуна.
+          balloonContentBody: '<img src="./assets/logo2.png" width="200">',
+          // Зададим содержимое нижней части балуна.
+          // balloonContentFooter: 'Информация предоставлена:<br/>OOO "Рога и копыта"',
+          // Зададим содержимое всплывающей подсказки.
+          // hintContent: "Рога и копыта",
+        });
+        // Добавим метку на карту.
+        myMap.geoObjects.add(placemark);
+        // Откроем балун на метке.
+        placemark.balloon.open();
+      }
+    </script>
   </head>
   <body>
     <div class="preview">
@@ -162,7 +194,7 @@
       </div>
       <footer>
         <div class="contacts section">
-          <h2>Контакты</h2>
+          <div id="map" style="height: 600px"></div>
         </div>
       </footer>
     </div>
