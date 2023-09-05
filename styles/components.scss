@@ -44,7 +44,7 @@ nav {
   }
   @media screen and (max-width: 840px) {
     ul {
-      transition: all 0.5s ease-in-out;
+      transition: all 0.4s ease;
       &.hide {
         transform: translate(0, -100%);
       }

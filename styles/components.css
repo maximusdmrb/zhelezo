@@ -45,7 +45,7 @@ nav ul li {
 }
 @media screen and (max-width: 840px) {
   nav ul {
-    transition: all 0.5s ease-in-out;
+    transition: all 0.4s ease;
     position: absolute;
     top: 0;
     left: 0;
