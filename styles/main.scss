@@ -30,11 +30,14 @@ ul {
   padding: 0 2rem;
 }
 .section {
-  margin-top: 14rem;
+  padding-top: 7rem;
+  margin-top: 7rem;
   @media screen and (max-width: 1000px) {
-    margin-top: 10rem;
+    padding-top: 5rem !important;
+    margin-top: 5rem !important;
   }
   @media screen and (max-width: 600px) {
-    margin-top: 5rem;
+    padding-top: 2.5rem !important;
+    margin-top: 2.5rem !important;
   }
 }

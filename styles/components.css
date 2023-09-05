@@ -43,7 +43,7 @@ nav ul {
 nav ul li {
   margin-right: 15px;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 840px) {
   nav ul {
     transition: all 0.5s ease-in-out;
     position: absolute;
@@ -51,7 +51,8 @@ nav ul li {
     left: 0;
     width: 100vw;
     display: block;
-    background: #222;
+    border-radius: 0 0 30px 30px;
+    background: #faff00;
     padding: 0;
   }
   nav ul.hide {
@@ -60,6 +61,9 @@ nav ul li {
   nav ul li {
     text-align: center;
     padding: 10px;
+  }
+  nav ul li * {
+    color: #000 !important;
   }
   nav .nav-toggle-btn {
     display: block;
@@ -215,14 +219,36 @@ nav ul li {
 .layout .price-card.discount p {
   color: #eee;
 }
-.layout .trainers {
-  margin-top: 14rem;
+@media screen and (max-width: 1200px) {
+  .layout .trainers h2 {
+    text-align: center;
+  }
+}
+.layout .trainers .owl-carousel-trainers {
+  display: none;
+}
+@media screen and (max-width: 910px) {
+  .layout .trainers h2 {
+    text-align: left;
+  }
+  .layout .trainers .owl-carousel-trainers {
+    display: block;
+  }
+  .layout .trainers .trainers-list {
+    display: none;
+  }
 }
 .layout .trainers-list {
   display: grid;
-  justify-content: space-between;
+  justify-content: center;
   grid-template-columns: auto auto auto auto;
+  flex-wrap: wrap;
   gap: 2rem;
+}
+@media screen and (max-width: 1200px) {
+  .layout .trainers-list {
+    grid-template-columns: auto auto auto;
+  }
 }
 .layout .trainers-list-item {
   cursor: pointer;
@@ -240,6 +266,13 @@ nav ul li {
   border-radius: 1.25rem;
   max-width: 13.875rem;
   pointer-events: none;
+}
+.layout .trainers .owl-stage-outer {
+  overflow: visible;
+}
+.layout .trainers .owl-trainers-list {
+  width: -moz-max-content !important;
+  width: max-content !important;
 }
 .layout .individual .circle-gradient {
   position: relative;

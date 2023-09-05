@@ -42,7 +42,7 @@ nav {
       margin-right: 15px;
     }
   }
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 840px) {
     ul {
       transition: all 0.5s ease-in-out;
       &.hide {
@@ -53,9 +53,13 @@ nav {
       left: 0;
       width: 100vw;
       display: block;
-      background: #222;
+      border-radius: 0 0 30px 30px;
+      background: $main-color;
       padding: 0;
       li {
+        * {
+          color: #000 !important;
+        }
         text-align: center;
         padding: 10px;
       }
@@ -220,11 +224,35 @@ nav {
     }
   }
   .trainers {
-    margin-top: 14rem;
+    @media screen and (max-width: 1200px) {
+      h2 {
+        text-align: center;
+      }
+    }
+    .owl-carousel-trainers {
+      display: none;
+    }
+    @media screen and (max-width: 910px) {
+      h2 {
+        text-align: left;
+      }
+      .owl-carousel-trainers {
+        display: block;
+      }
+      .trainers-list {
+        display: none;
+      }
+    }
     &-list {
       display: grid;
-      justify-content: space-between;
+      justify-content: center;
       grid-template-columns: auto auto auto auto;
+
+      @media screen and (max-width: 1200px) {
+        grid-template-columns: auto auto auto;
+      }
+
+      flex-wrap: wrap;
       gap: 2rem;
       &-item {
         cursor: pointer;
@@ -243,6 +271,12 @@ nav {
           pointer-events: none;
         }
       }
+    }
+    .owl-stage-outer {
+      overflow: visible;
+    }
+    .owl-trainers-list {
+      width: max-content !important;
     }
   }
   .individual {

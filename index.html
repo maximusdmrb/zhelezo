@@ -52,11 +52,10 @@
           <nav>
             <div class="nav-toggle-btn">Меню</div>
             <ul class="hide">
-              <li><a class="nav-text" href="#">О клубе</a></li>
-              <li><a class="nav-text" href="#">Услуги</a></li>
-              <li><a class="nav-text" href="#">Фотогалерея</a></li>
-              <li><a class="nav-text" href="#">Прайс-лист</a></li>
-              <li><a class="nav-text" href="#">Тренеры</a></li>
+              <li><a class="nav-text" href="#about">О клубе</a></li>
+              <li><a class="nav-text" href="#cards">Клубные карты</a></li>
+              <li><a class="nav-text" href="#trainers">Тренерский состав</a></li>
+              <li><a class="nav-text" href="#individual">Тренировки</a></li>
               <li><a class="nav-text" href="#">Контакты</a></li>
             </ul>
           </nav>
@@ -72,7 +71,7 @@
       </div>
     </div>
     <div class="layout">
-      <div class="about section">
+      <div id="about" class="about section">
         <div class="row justify-content-between">
           <div class="col-lg-5">
             <h2>О клубе</h2>
@@ -200,7 +199,7 @@
           </div>
         </div>
       </div>
-      <div class="price section">
+      <div id="cards" class="price section">
         <h2>Клубные карты</h2>
         <div class="owl-carousel owl-carousel-unlimited owl-theme owl-loaded">
           <div class="owl-stage-outer">
@@ -218,11 +217,16 @@
           </div>
         </div>
       </div>
-      <div class="trainers section">
+      <div id="trainers" class="trainers section">
         <h2>Тренерский состав</h2>
         <div class="trainers-list"></div>
+        <div class="owl-carousel owl-carousel-trainers owl-theme owl-loaded">
+          <div class="owl-stage-outer">
+            <div class="owl-stage owl-trainers-list"></div>
+          </div>
+        </div>
       </div>
-      <div class="individual section">
+      <div id="individual" class="individual section">
         <div class="row">
           <div class="col-md-6">
             <h2>Тренировки</h2>
@@ -247,10 +251,10 @@
       crossorigin="anonymous"
     ></script>
     <script src="./js/owl.carousel.min.js"></script>
-    <script src="./js/carousel.js"></script>
     <script type="module" src="./js/renderPrices.js"></script>
     <script type="module" src="./js/renderTrainers.js"></script>
     <script type="module" src="./js/renderTraining.js"></script>
     <script type="module" src="./js/nav.js"></script>
+    <script src="./js/carousel.js"></script>
   </body>
 </html>

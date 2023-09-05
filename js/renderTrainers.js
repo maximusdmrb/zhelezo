@@ -1,4 +1,8 @@
-const createTrainers = (name = "Иван Иванов", src = "0.jpg", description = "Персональный тренер") => ({ name, src, description });
+const createTrainers = (name = "Иван Иванов", src = "0.jpg", description = "Персональный тренер") => ({
+  name,
+  src,
+  description,
+});
 const trainers = [
   createTrainers(
     "Карина Грищенко",
@@ -10,8 +14,16 @@ const trainers = [
     "1.jpg",
     "Закончил Московскую государственную академию физкультуры и спорта (МГАФК) ТиМ бокс<br>Колледж Вейдера по направлению персональные тренер тренажерного зала <br>КМС по боксу <br> Не отднократный победитель районных областных Всероссийским турниров и участник международных турниров по боксу"
   ),
-  createTrainers("Андрей Меркулов", "2.jpg", "У меня диплом Московская школа фитнеса MFS персональный тренер тренажерного зала"),
-  createTrainers("Александр Гладков", "3.jpg", "Диплом Московская школа фитнеса MFS персональный тренер тренажерного зала"),
+  createTrainers(
+    "Андрей Меркулов",
+    "2.jpg",
+    "У меня диплом Московская школа фитнеса MFS персональный тренер тренажерного зала"
+  ),
+  createTrainers(
+    "Александр Гладков",
+    "3.jpg",
+    "Диплом Московская школа фитнеса MFS персональный тренер тренажерного зала"
+  ),
   createTrainers(
     "Дарья Круглякова",
     "4.jpg",
@@ -29,7 +41,10 @@ const boxTrainers = document.querySelector(".trainers-list");
 for (const trainer of trainers) {
   boxTrainers.insertAdjacentHTML(
     "beforebegin",
-    `<div class="modal fade modal-lg" id="modal${trainer.src.replace(".", "")}" tabindex="-1" aria-labelledby="modal${trainer.src.replace(".", "")}Label" aria-hidden="true">
+    `<div class="modal fade modal-lg" id="modal${trainer.src.replace(
+      ".",
+      ""
+    )}" tabindex="-1" aria-labelledby="modal${trainer.src.replace(".", "")}Label" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
@@ -47,7 +62,21 @@ for (const trainer of trainers) {
 
   boxTrainers.insertAdjacentHTML(
     "beforeend",
-    `<div><div class="trainers-list-item" data-bs-toggle="modal" data-bs-target="#modal${trainer.src.replace(".", "")}" onclick="showTrainderCard('${trainer.name}');">
+    `<div><div class="trainers-list-item" data-bs-toggle="modal" data-bs-target="#modal${trainer.src.replace(
+      ".",
+      ""
+    )}" onclick="showTrainderCard('${trainer.name}');">
+    <img src="./assets/trainers/${trainer.src}" alt="" srcset="" />
+    <h3>${trainer.name}</h3>
+    <buttun class="cbtn small">Запись</buttun>
+  </div></div>`
+  );
+  document.querySelector(".owl-trainers-list").insertAdjacentHTML(
+    "beforeend",
+    `<div class="owl-item"><div class="trainers-list-item" data-bs-toggle="modal" data-bs-target="#modal${trainer.src.replace(
+      ".",
+      ""
+    )}" onclick="showTrainderCard('${trainer.name}');">
     <img src="./assets/trainers/${trainer.src}" alt="" srcset="" />
     <h3>${trainer.name}</h3>
     <buttun class="cbtn small">Запись</buttun>

@@ -29,4 +29,12 @@ $(document).ready(function () {
   $(".owl-carousel-unlimited").owlCarousel(option);
   $(".owl-carousel-daytime").owlCarousel(option);
   $(".owl-carousel-childlike").owlCarousel(option);
+
+  $(".owl-carousel-trainers").owlCarousel({
+    margin: 16,
+    nav: false,
+    loop: true,
+    dots: false,
+    autoWidth: true,
+  });
 });
