@@ -3,6 +3,22 @@
   display: none;
 }
 
+.offcanvas-bottom {
+  height: -moz-max-content !important;
+  height: max-content !important;
+}
+
+.offcanvas-body * {
+  text-align: justify;
+}
+.offcanvas-body p {
+  color: #000;
+}
+.offcanvas-body img {
+  max-width: 100%;
+  border-radius: 1rem;
+}
+
 .cbtn,
 button {
   cursor: pointer;

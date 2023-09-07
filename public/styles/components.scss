@@ -3,7 +3,21 @@ $main-color: #faff00;
 .owl-dots {
   display: none;
 }
-
+.offcanvas-bottom {
+  height: max-content !important;
+}
+.offcanvas-body {
+  * {
+    text-align: justify;
+  }
+  p {
+    color: #000;
+  }
+  img {
+    max-width: 100%;
+    border-radius: 1rem;
+  }
+}
 .cbtn,
 button {
   cursor: pointer;
@@ -71,8 +85,7 @@ nav {
 }
 .preview {
   height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 1), transparent), linear-gradient(transparent, rgba(0, 0, 0, 1)),
-    url("../assets/gallery/0.jpg") no-repeat center center;
+  background: linear-gradient(rgba(0, 0, 0, 1), transparent), linear-gradient(transparent, rgba(0, 0, 0, 1)), url("../assets/gallery/0.jpg") no-repeat center center;
   background-size: cover;
   .layout {
     height: 100%;

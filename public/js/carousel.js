@@ -33,7 +33,7 @@ $(document).ready(function () {
   $(".owl-carousel-trainers").owlCarousel({
     margin: 16,
     nav: false,
-    loop: true,
+    // loop: true,
     dots: false,
     autoWidth: true,
   });

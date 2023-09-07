@@ -1,4 +1,4 @@
-import { training } from "../config.js";
+import { training } from "./config.js";
 
 let i = 0,
   k = 0;

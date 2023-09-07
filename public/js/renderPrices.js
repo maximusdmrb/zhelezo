@@ -1,4 +1,4 @@
-import { prices } from "../config.js";
+import { prices } from "./config.js";
 
 const unlimited = document.querySelector(".prices-unlimited");
 const daytime = document.querySelector(".prices-daytime");

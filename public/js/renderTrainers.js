@@ -14,16 +14,8 @@ const trainers = [
     "1.jpg",
     "Закончил Московскую государственную академию физкультуры и спорта (МГАФК) ТиМ бокс<br>Колледж Вейдера по направлению персональные тренер тренажерного зала <br>КМС по боксу <br> Не отднократный победитель районных областных Всероссийским турниров и участник международных турниров по боксу"
   ),
-  createTrainers(
-    "Андрей Меркулов",
-    "2.jpg",
-    "У меня диплом Московская школа фитнеса MFS персональный тренер тренажерного зала"
-  ),
-  createTrainers(
-    "Александр Гладков",
-    "3.jpg",
-    "Диплом Московская школа фитнеса MFS персональный тренер тренажерного зала"
-  ),
+  createTrainers("Андрей Меркулов", "2.jpg", "У меня диплом Московская школа фитнеса MFS персональный тренер тренажерного зала"),
+  createTrainers("Александр Гладков", "3.jpg", "Диплом Московская школа фитнеса MFS персональный тренер тренажерного зала"),
   createTrainers(
     "Дарья Круглякова",
     "4.jpg",
@@ -39,50 +31,49 @@ const trainers = [
 const boxTrainers = document.querySelector(".trainers-list");
 
 for (const trainer of trainers) {
-  boxTrainers.insertAdjacentHTML(
+  // Рендер модальных окон
+  /*   boxTrainers.insertAdjacentHTML(
     "beforebegin",
-    `<div class="modal fade modal-lg" id="modal${trainer.src.replace(
-      ".",
-      ""
-    )}" tabindex="-1" aria-labelledby="modal${trainer.src.replace(".", "")}Label" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h3 class="modal-title fs-5" id="modal${trainer.src.replace(".", "")}Label">${trainer.name}</h3>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    `<div class="modal fade modal-lg" id="modal${trainer.src.replace(".", "")}" tabindex="-1" aria-labelledby="modal${trainer.src.replace(".", "")}Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="modal-title fs-5" id="modal${trainer.src.replace(".", "")}Label">${trainer.name}</h3>
+              
+            </div>
+            <div class="modal-body">
+            <img src="./assets/trainers/${trainer.src}" alt="" srcset="" />
+             ${trainer.description} <input type="text" /></div>
+          <div class="modal-footer">
+          <a class="cbtn small">Записаться</a>
+          </div>
+        </div>
       </div>
-      <div class="modal-body">${trainer.description} <input type="text" /></div>
-      <div class="modal-footer">
-      <a class="cbtn small">Записаться</a>
-      </div>
-    </div>
-  </div>
-</div>`
-  );
+    </div>`
+  ); */
 
+  //  Рендер карточек
   boxTrainers.insertAdjacentHTML(
     "beforeend",
-    `<div><div class="trainers-list-item" data-bs-toggle="modal" data-bs-target="#modal${trainer.src.replace(
-      ".",
-      ""
-    )}" onclick="showTrainderCard('${trainer.name}');">
+    `<div><div class="trainers-list-item" data-service="trainer" data-json='${JSON.stringify(trainer)}' data-bs-toggle="offcanvas" >
     <img src="./assets/trainers/${trainer.src}" alt="" srcset="" />
     <h3>${trainer.name}</h3>
     <buttun class="cbtn small">Запись</buttun>
   </div></div>`
   );
+
+  // Рендер карточек для мобилок
   document.querySelector(".owl-trainers-list").insertAdjacentHTML(
     "beforeend",
-    `<div class="owl-item"><div class="trainers-list-item" data-bs-toggle="modal" data-bs-target="#modal${trainer.src.replace(
-      ".",
-      ""
-    )}" onclick="showTrainderCard('${trainer.name}');">
+    `<div class="owl-item"><div class="trainers-list-item" data-service="trainer" data-json='${JSON.stringify(trainer)}' data-bs-toggle="offcanvas">
     <img src="./assets/trainers/${trainer.src}" alt="" srcset="" />
     <h3>${trainer.name}</h3>
-    <buttun class="cbtn small">Запись</buttun>
+    <button class="cbtn small" type="button">
+      Запись
+    </button>
   </div></div>`
   );
 }
-const showTrainderCard = (name) => {
+export const showTrainderCard = (name) => {
   console.log(trainers.find((trainer) => trainer.name == name));
 };
