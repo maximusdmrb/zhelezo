@@ -7,7 +7,7 @@ const trainers = [
   createTrainers(
     "Карина Грищенко",
     "0.jpg",
-    "<p>2016 «Витебский государственный университет имени П.М.Машерова», факультет физической культуры и спорта, по специальности и специализации «Физическая культура. Физкультурно-оздоровительная и туристско-рекреационная деятельность»<br>2016 семинар WELLCOM Wellness Company «Функциональная анатомия ОДА. Туловище»<br>2016 семинар WELLCOM Wellness Company «Миофасциальное расслабление. Туловище. ПРАКТИКУМ»<br>2017 семинар «Гибкость с тренажером Бизон»<br>2019 семина&nbsp;WELLCOM Wellness Company «Восстановление функций грудной клетки»<br>Мастер спорта шорт-треку<br>Участвовала в составе сборной Республики Беларусь в: Чемпионате Республики Беларусь, Чемпионате Европы, Кубке мира, Европейских кубках</p>"
+    "2016 «Витебский государственный университет имени П.М.Машерова», факультет физической культуры и спорта, по специальности и специализации «Физическая культура. Физкультурно-оздоровительная и туристско-рекреационная деятельность»<br>2016 семинар WELLCOM Wellness Company «Функциональная анатомия ОДА. Туловище»<br>2016 семинар WELLCOM Wellness Company «Миофасциальное расслабление. Туловище. ПРАКТИКУМ»<br>2017 семинар «Гибкость с тренажером Бизон»<br>2019 семина&nbsp;WELLCOM Wellness Company «Восстановление функций грудной клетки»<br>Мастер спорта шорт-треку<br>Участвовала в составе сборной Республики Беларусь в: Чемпионате Республики Беларусь, Чемпионате Европы, Кубке мира, Европейских кубках"
   ),
   createTrainers(
     "Карина Грищенко",
@@ -65,7 +65,9 @@ for (const trainer of trainers) {
   // Рендер карточек для мобилок
   document.querySelector(".owl-trainers-list").insertAdjacentHTML(
     "beforeend",
-    `<div class="owl-item"><div class="trainers-list-item" data-service="trainer" data-json='${JSON.stringify(trainer)}' data-bs-toggle="offcanvas">
+    `<div class="owl-item"><div class="trainers-list-item" data-service="trainer" data-json='${JSON.stringify(
+      trainer
+    )}' data-bs-toggle="offcanvas">
     <img src="./assets/trainers/${trainer.src}" alt="" srcset="" />
     <h3>${trainer.name}</h3>
     <button class="cbtn small" type="button">

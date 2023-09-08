@@ -3,7 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>qwfwqf</title>
+    <meta
+      name="description"
+      content="Тренажерный зал «ЖЕЛЕЗО» рад приветствовать каждого, кто ценит свое здоровье, свою красоту и свое время. Идеальная физическая форма – показатель качества вашей жизни. Настало время прислушаться к собственному организму, привести в порядок мышцы, избавиться от лишнего веса, стать стройным, подтянутым, а главное – здоровым."
+    />
+    <title>"Железо" - тренажерный зал</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="./styles/main.css" />
     <script src="https://api-maps.yandex.ru/2.1/?apikey=a6e0d918-5ee1-4bc2-9d86-0fe7bb97a683&lang=ru_RU"></script>
@@ -11,30 +15,15 @@
       ymaps.ready(init);
 
       function init() {
-        var myMap = new ymaps.Map(
-          "map",
-          {
-            center: [56.016048, 37.476757],
-            zoom: 16,
-            controls: [],
-          },
-          {
-            searchControlProvider: "yandex#search",
-          }
-        );
-        var placemark = new ymaps.Placemark(myMap.getCenter(), {
-          // Зададим содержимое заголовка балуна.
-          // balloonContentHeader: '<a href = "#">Рога и копыта</a><br>' + '<span class="description">Сеть кинотеатров</span>',
-          // Зададим содержимое основной части балуна.
-          balloonContentBody: '<img src="./assets/logo2.png" width="200">',
-          // Зададим содержимое нижней части балуна.
-          // balloonContentFooter: 'Информация предоставлена:<br/>OOO "Рога и копыта"',
-          // Зададим содержимое всплывающей подсказки.
-          // hintContent: "Рога и копыта",
+        var myMap = new ymaps.Map("map", {
+          center: [56.016048, 37.476757],
+          zoom: 16,
+          controls: [],
         });
-        // Добавим метку на карту.
+        var placemark = new ymaps.Placemark(myMap.getCenter(), {
+          balloonContentBody: '<img src="./assets/logo2.png" width="200">',
+        });
         myMap.geoObjects.add(placemark);
-        // Откроем балун на метке.
         placemark.balloon.open();
       }
     </script>
@@ -75,10 +64,14 @@
         <div class="row justify-content-between">
           <div class="col-lg-5">
             <h2>О клубе</h2>
-            <p>Спортивная фигура располагает к Вам людей; безупречное здоровье позволяет жить полной и активной жизнью; участие и победы в соревнованиях поднимают вашу самооценку и придают уверенности в себе!</p>
             <p>
-              Тренажерный зал «ЖЕЛЕЗО» рад приветствовать каждого, кто ценит свое здоровье, свою красоту и свое время. Идеальная физическая форма – показатель качества вашей жизни. Настало время прислушаться к собственному организму,
-              привести в порядок мышцы, избавиться от лишнего веса, стать стройным, подтянутым, а главное – здоровым.
+              Спортивная фигура располагает к Вам людей; безупречное здоровье позволяет жить полной и активной жизнью; участие и победы в
+              соревнованиях поднимают вашу самооценку и придают уверенности в себе!
+            </p>
+            <p>
+              Тренажерный зал «ЖЕЛЕЗО» рад приветствовать каждого, кто ценит свое здоровье, свою красоту и свое время. Идеальная физическая
+              форма – показатель качества вашей жизни. Настало время прислушаться к собственному организму, привести в порядок мышцы,
+              избавиться от лишнего веса, стать стройным, подтянутым, а главное – здоровым.
             </p>
             <!-- <p>
               Спорт – это дорога в счастливую, успешную жизнь. Это уникальная возможность яркими красками раскрасить серые будни, получить массу позитивных эмоций и наконец-то начать гордиться собой! Оборудование в нашем тренажерном зале
@@ -157,7 +150,10 @@
               <li><img src="./assets/ok.svg" alt="advantages" />1 эллипсоидный тренажер</li>
               <li><img src="./assets/ok.svg" alt="advantages" />3 велотренажера</li>
               <li><img src="./assets/ok.svg" alt="advantages" />Блочные тренажеры (32 единицы оборудования)</li>
-              <li><img src="./assets/ok.svg" alt="advantages" />Зона свободных весов (1500 кг в блинах, гантельный ряд до 50кг, профессиональные грифы)</li>
+              <li>
+                <img src="./assets/ok.svg" alt="advantages" />Зона свободных весов (1500 кг в блинах, гантельный ряд до 50кг,
+                профессиональные грифы)
+              </li>
             </ul>
           </div>
           <div class="advantages-list-item">
@@ -234,18 +230,28 @@
           <div id="map" style="height: 600px"></div>
         </div>
       </footer>
+      <div
+        class="offcanvas offcanvas-bottom"
+        data-bs-backdrop="true"
+        tabindex="-1"
+        id="offcanvasExample"
+        aria-labelledby="offcanvasExampleLabel"
+      >
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasExampleLabel"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body"></div>
+      </div>
     </div>
 
-    <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-      <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-      </div>
-      <div class="offcanvas-body"></div>
-    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./js/asyncText.js"></script>
-    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.min.js"
+      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+      crossorigin="anonymous"
+    ></script>
     <script src="./js/owl.carousel.min.js"></script>
     <script type="module" src="./js/renderPrices.js"></script>
     <script type="module" src="./js/renderTrainers.js"></script>
