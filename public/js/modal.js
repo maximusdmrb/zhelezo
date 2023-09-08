@@ -20,7 +20,7 @@ for (const service of [...document.querySelectorAll('[data-bs-toggle="offcanvas"
   });
 }
 
-window.addEventListener("resize", function (params) {
+function changeModalForDevice() {
   if (this.screen.width < 450) {
     this.document.querySelector("#offcanvasExample").classList.remove("offcanvas-end");
     this.document.querySelector("#offcanvasExample").classList.add("offcanvas-bottom");
@@ -28,4 +28,6 @@ window.addEventListener("resize", function (params) {
     this.document.querySelector("#offcanvasExample").classList.add("offcanvas-end");
     this.document.querySelector("#offcanvasExample").classList.remove("offcanvas-bottom");
   }
-});
+}
+changeModalForDevice.call(window);
+window.addEventListener("resize", changeModalForDevice);
