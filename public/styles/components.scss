@@ -3,43 +3,63 @@ $main-color: #faff00;
 .owl-dots {
   display: none;
 }
-.offcanvas-bottom {
-  height: max-content !important;
+.fade {
+  backdrop-filter: blur(5px);
+  background: rgba(0, 0, 0, 0.6);
 }
-.offcanvas {
-  width: 500px !important;
-  background: url("../assets/trainers/0.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  &::before {
-    z-index: 0;
-    content: "";
-    position: absolute;
-    left: -1px;
-    width: 100%;
-    height: 100%;
-    background: rgba(#000, 0.7);
-    backdrop-filter: blur(10px);
+.modal-content {
+  background: none;
+  border: 0;
+
+  @media screen and (max-width: 991px) {
+    #service-description {
+      max-height: 400px;
+      overflow: auto;
+    }
   }
-}
-.offcanvas-header {
-  position: relative;
-  z-index: 1;
-}
-.offcanvas-body {
-  z-index: 1;
-  position: relative;
-  * {
-    color: #fff;
-    text-align: justify;
+  .modal-body {
+    .col-lg-7 {
+      margin-top: 1.5rem;
+      .cbtn {
+        font-size: 1rem !important;
+        margin-bottom: 1.5rem;
+        p {
+          color: #444 !important;
+        }
+      }
+    }
+    gap: 24px;
+    img {
+      border-radius: 1.5rem;
+      width: 100%;
+      max-width: 300px;
+    }
   }
-  img {
-    max-width: 100%;
-    border-radius: 1rem;
-  }
-  .description {
-    font-size: 0.85rem;
+  .row {
+    .modal-item {
+      color: #fff;
+      background: #222;
+      height: 100%;
+      padding: 2rem;
+      border-radius: 1.5rem;
+      .input-group {
+        input {
+          box-shadow: none !important;
+          &::placeholder {
+            color: gray;
+          }
+        }
+        * {
+          border: 0;
+          background: none;
+          border-bottom: 1px solid #fff;
+          color: #fff;
+        }
+      }
+    }
+    .modal-form {
+      display: inline-block;
+    }
   }
 }
 .cbtn,
@@ -51,6 +71,8 @@ button {
   padding: 1rem 3.19rem;
   text-decoration: none;
   color: #000;
+  border: 0;
+  display: inline-block;
 }
 .cbtn.small {
   padding: 0.38rem 2rem;
@@ -109,8 +131,7 @@ nav {
 }
 .preview {
   height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 1), transparent), linear-gradient(transparent, rgba(0, 0, 0, 1)),
-    url("../assets/gallery/0.jpg") no-repeat center center;
+  background: linear-gradient(rgba(0, 0, 0, 1), transparent), linear-gradient(transparent, rgba(0, 0, 0, 1)), url("../assets/gallery/0.jpg") no-repeat center center;
   background-size: cover;
   .layout {
     height: 100%;
@@ -250,15 +271,6 @@ nav {
           color: #ccc;
         }
       }
-      &.discount {
-        background: #e83b3b;
-        * {
-          color: #fff;
-        }
-        p {
-          color: #eee;
-        }
-      }
     }
   }
   .trainers {
@@ -344,4 +356,14 @@ nav {
 }
 img {
   pointer-events: none;
+}
+.discount {
+  background: #e83b3b !important;
+  color: #fff !important;
+  * {
+    color: #fff !important;
+  }
+  p {
+    color: #eee !important;
+  }
 }

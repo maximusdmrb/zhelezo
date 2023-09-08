@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -64,14 +64,10 @@
         <div class="row justify-content-between">
           <div class="col-lg-5">
             <h2>О клубе</h2>
+            <p>Спортивная фигура располагает к Вам людей; безупречное здоровье позволяет жить полной и активной жизнью; участие и победы в соревнованиях поднимают вашу самооценку и придают уверенности в себе!</p>
             <p>
-              Спортивная фигура располагает к Вам людей; безупречное здоровье позволяет жить полной и активной жизнью; участие и победы в
-              соревнованиях поднимают вашу самооценку и придают уверенности в себе!
-            </p>
-            <p>
-              Тренажерный зал «ЖЕЛЕЗО» рад приветствовать каждого, кто ценит свое здоровье, свою красоту и свое время. Идеальная физическая
-              форма – показатель качества вашей жизни. Настало время прислушаться к собственному организму, привести в порядок мышцы,
-              избавиться от лишнего веса, стать стройным, подтянутым, а главное – здоровым.
+              Тренажерный зал «ЖЕЛЕЗО» рад приветствовать каждого, кто ценит свое здоровье, свою красоту и свое время. Идеальная физическая форма – показатель качества вашей жизни. Настало время прислушаться к собственному организму,
+              привести в порядок мышцы, избавиться от лишнего веса, стать стройным, подтянутым, а главное – здоровым.
             </p>
             <!-- <p>
               Спорт – это дорога в счастливую, успешную жизнь. Это уникальная возможность яркими красками раскрасить серые будни, получить массу позитивных эмоций и наконец-то начать гордиться собой! Оборудование в нашем тренажерном зале
@@ -150,10 +146,7 @@
               <li><img src="./assets/ok.svg" alt="advantages" />1 эллипсоидный тренажер</li>
               <li><img src="./assets/ok.svg" alt="advantages" />3 велотренажера</li>
               <li><img src="./assets/ok.svg" alt="advantages" />Блочные тренажеры (32 единицы оборудования)</li>
-              <li>
-                <img src="./assets/ok.svg" alt="advantages" />Зона свободных весов (1500 кг в блинах, гантельный ряд до 50кг,
-                профессиональные грифы)
-              </li>
+              <li><img src="./assets/ok.svg" alt="advantages" />Зона свободных весов (1500 кг в блинах, гантельный ряд до 50кг, профессиональные грифы)</li>
             </ul>
           </div>
           <div class="advantages-list-item">
@@ -230,28 +223,46 @@
           <div id="map" style="height: 600px"></div>
         </div>
       </footer>
-      <div
-        class="offcanvas offcanvas-bottom"
-        data-bs-backdrop="true"
-        tabindex="-1"
-        id="offcanvasExample"
-        aria-labelledby="offcanvasExampleLabel"
-      >
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasExampleLabel"></h5>
-          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="modal fade" id="modal" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-body d-flex flex-column">
+            <div class="row align-items-end">
+              <div class="col-lg-5" id="service-img"></div>
+              <div class="col-lg-7">
+                <a class="cbtn" href="tel:79687338393" style="font-size: 1.5rem"
+                  >+7 (985) 343-33-57
+                  <p style="margin: 0; padding: 0; color: inherit">с 08:00 до 23:00</p>
+                </a>
+                <div class="modal-item" id="service-description">2</div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <div class="modal-item modal-form">
+                  <form action="/public/index.html" method="post">
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <div class="input-group">
+                          <span class="input-group-text" id="basic-addon1">+7</span>
+                          <input type="number" class="form-control" maxlength="1" pattern="[0-9]{10}" placeholder="987 654 43 21" aria-label="tel" aria-describedby="basic-addon1" />
+                        </div>
+                      </div>
+                      <div class="col-lg-6"><input class="cbtn discount" type="submit" value="Заказать звонок" /></div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="offcanvas-body"></div>
       </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./js/asyncText.js"></script>
-    <script
-      src="https://code.jquery.com/jquery-3.7.0.min.js"
-      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
     <script src="./js/owl.carousel.min.js"></script>
     <script type="module" src="./js/renderPrices.js"></script>
     <script type="module" src="./js/renderTrainers.js"></script>

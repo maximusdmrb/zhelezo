@@ -1,41 +1,18 @@
-const bsOffcanvas = new bootstrap.Offcanvas("#offcanvasExample", {
-  scroll: false,
-});
-const offcanvasExample = document.querySelector("#offcanvasExample");
-offcanvasExample.addEventListener("show.bs.offcanvas", (event) => {
-  console.log(event.target);
-});
-
-for (const service of [...document.querySelectorAll('[data-bs-toggle="offcanvas"]')]) {
+for (const service of [...document.querySelectorAll('[data-bs-toggle="modal"]')]) {
   service.addEventListener("click", function ({ target }) {
     const { service } = this.dataset;
     const { json } = this.dataset;
     const { name, description, src } = JSON.parse(json);
-    console.log(json);
+    console.log(name);
     switch (this.dataset.service) {
       case "trainer":
-        document.querySelector("#offcanvasExampleLabel").innerHTML = name;
-        document.querySelector(".offcanvas").style.backgroundImage = `url("./assets/trainers/${src}")`;
-        document.querySelector(".offcanvas-body").innerHTML = `
-        <div class="row">
-        <div class="col-md-12 description">${description}</div>
-        </div>
-        `;
-        break;
-      // <div class="col-md-6"><img src="./assets/trainers/${src}" alt="" srcset="" /></div>
+        const img = document.createElement("img");
+        img.src = `./assets/trainers/${src}`;
+        document.querySelector("#service-img").innerHTML = "";
+        document.querySelector("#service-img").insertAdjacentElement("beforeend", img);
+
+        document.querySelector("#service-description").innerHTML = description;
     }
-    bsOffcanvas.show();
+    // bsOffcanvas.show();
   });
 }
-
-function changeModalForDevice() {
-  if (this.screen.width < 450) {
-    this.document.querySelector("#offcanvasExample").classList.remove("offcanvas-end");
-    this.document.querySelector("#offcanvasExample").classList.add("offcanvas-bottom");
-  } else {
-    this.document.querySelector("#offcanvasExample").classList.add("offcanvas-end");
-    this.document.querySelector("#offcanvasExample").classList.remove("offcanvas-bottom");
-  }
-}
-changeModalForDevice.call(window);
-window.addEventListener("resize", changeModalForDevice);

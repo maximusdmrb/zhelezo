@@ -3,49 +3,64 @@
   display: none;
 }
 
-.offcanvas-bottom {
-  height: -moz-max-content !important;
-  height: max-content !important;
+.fade {
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  background: rgba(0, 0, 0, 0.6);
 }
 
-.offcanvas {
-  width: 500px !important;
-  background: url("../assets/trainers/0.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+.modal-content {
+  background: none;
+  border: 0;
 }
-.offcanvas::before {
-  z-index: 0;
-  content: "";
-  position: absolute;
-  left: -1px;
+@media screen and (max-width: 991px) {
+  .modal-content #service-description {
+    max-height: 400px;
+    overflow: auto;
+  }
+}
+.modal-content .modal-body {
+  gap: 24px;
+}
+.modal-content .modal-body .col-lg-7 {
+  margin-top: 1.5rem;
+}
+.modal-content .modal-body .col-lg-7 .cbtn {
+  font-size: 1rem !important;
+  margin-bottom: 1.5rem;
+}
+.modal-content .modal-body .col-lg-7 .cbtn p {
+  color: #444 !important;
+}
+.modal-content .modal-body img {
+  border-radius: 1.5rem;
   width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.7);
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+  max-width: 300px;
 }
-
-.offcanvas-header {
-  position: relative;
-  z-index: 1;
-}
-
-.offcanvas-body {
-  z-index: 1;
-  position: relative;
-}
-.offcanvas-body * {
+.modal-content .row .modal-item {
   color: #fff;
-  text-align: justify;
+  background: #222;
+  height: 100%;
+  padding: 2rem;
+  border-radius: 1.5rem;
 }
-.offcanvas-body img {
-  max-width: 100%;
-  border-radius: 1rem;
+.modal-content .row .modal-item .input-group input {
+  box-shadow: none !important;
 }
-.offcanvas-body .description {
-  font-size: 0.85rem;
+.modal-content .row .modal-item .input-group input::-moz-placeholder {
+  color: gray;
+}
+.modal-content .row .modal-item .input-group input::placeholder {
+  color: gray;
+}
+.modal-content .row .modal-item .input-group * {
+  border: 0;
+  background: none;
+  border-bottom: 1px solid #fff;
+  color: #fff;
+}
+.modal-content .row .modal-form {
+  display: inline-block;
 }
 
 .cbtn,
@@ -57,6 +72,8 @@ button {
   padding: 1rem 3.19rem;
   text-decoration: none;
   color: #000;
+  border: 0;
+  display: inline-block;
 }
 
 .cbtn.small {
@@ -255,15 +272,6 @@ nav ul li {
 .layout .price-card.one p {
   color: #ccc;
 }
-.layout .price-card.discount {
-  background: #e83b3b;
-}
-.layout .price-card.discount * {
-  color: #fff;
-}
-.layout .price-card.discount p {
-  color: #eee;
-}
 @media screen and (max-width: 1200px) {
   .layout .trainers h2 {
     text-align: center;
@@ -342,4 +350,15 @@ nav ul li {
 
 img {
   pointer-events: none;
+}
+
+.discount {
+  background: #e83b3b !important;
+  color: #fff !important;
+}
+.discount * {
+  color: #fff !important;
+}
+.discount p {
+  color: #eee !important;
 }/*# sourceMappingURL=components.css.map */
