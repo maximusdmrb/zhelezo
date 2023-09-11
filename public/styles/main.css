@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("./typography.css"); 
 @import url("./components.css"); 
 @import url("./customAccordion.css"); 
@@ -53,4 +54,25 @@ input::-webkit-inner-spin-button {
   /* display: none; <- Crashes Chrome on hover */
   -webkit-appearance: none;
   margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+* {
+  /* плашка-бегунок и фон */
+  scrollbar-color: #faff00 transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 5px; /* в основном для вертикальных полос прокрутки */
+  height: 5px; /* в основном для горизонтальных полос прокрутки */
+}
+
+*::-webkit-scrollbar-thumb {
+  /* плашка-бегунок */
+  background: #faff00;
+  border-radius: 3px;
+}
+
+*::-webkit-scrollbar-track {
+  /* фон */
+  background: transparent;
 }/*# sourceMappingURL=main.css.map */

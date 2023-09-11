@@ -12,6 +12,7 @@ for (const service of [...document.querySelectorAll('[data-bs-toggle="modal"]')]
         document.querySelector("#service-img").insertAdjacentElement("beforeend", img);
 
         document.querySelector("#service-description").innerHTML = description;
+        document.querySelector("#trainer-name").innerHTML = name;
     }
     // bsOffcanvas.show();
   });

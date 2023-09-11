@@ -11,11 +11,12 @@ $main-color: #faff00;
   background: none;
   border: 0;
 
-  @media screen and (max-width: 991px) {
-    #service-description {
-      max-height: 400px;
-      overflow: auto;
-    }
+  #service-description {
+    max-height: 400px;
+    overflow: auto;
+  }
+  #trainer-name {
+    color: #fff;
   }
   .modal-body {
     .col-lg-7 {
@@ -59,6 +60,7 @@ $main-color: #faff00;
     }
     .modal-form {
       display: inline-block;
+      text-align: center;
     }
   }
 }
@@ -330,7 +332,11 @@ nav {
     }
   }
   .individual {
+    .row {
+      justify-content: center;
+    }
     .circle-gradient {
+      max-width: 550px;
       position: relative;
 
       &::before {
@@ -350,8 +356,29 @@ nav {
 
   .contacts {
     margin-bottom: 10rem;
-    border-radius: 20px;
-    overflow: hidden;
+    &-info {
+      margin-bottom: 5rem;
+      text-align: right;
+      color: #fff;
+      > *:not(:last-child) {
+        margin-bottom: 1.5rem !important;
+      }
+      &-item {
+        text-decoration: none;
+        color: inherit;
+        display: block;
+        span {
+          color: $main-color;
+        }
+      }
+    }
+    #map {
+      overflow: hidden;
+      border-radius: 20px;
+      @media screen and (max-width: 721px) {
+        height: 400px !important;
+      }
+    }
   }
 }
 img {

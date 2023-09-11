@@ -39,13 +39,13 @@
             <!-- <img src="assets/logo2.png" height="60" alt="" srcset="" /> -->
           </div>
           <nav>
-            <div class="nav-toggle-btn">Меню</div>
+            <div class="nav-toggle-btn"><img src="./assets/hamburger.svg" alt="" srcset="" /></div>
             <ul class="hide">
               <li><a class="nav-text" href="#about">О клубе</a></li>
               <li><a class="nav-text" href="#cards">Клубные карты</a></li>
               <li><a class="nav-text" href="#trainers">Тренерский состав</a></li>
               <li><a class="nav-text" href="#individual">Тренировки</a></li>
-              <li><a class="nav-text" href="#">Контакты</a></li>
+              <li><a class="nav-text" href="#contacts">Контакты</a></li>
             </ul>
           </nav>
         </header>
@@ -209,18 +209,35 @@
       </div>
       <div id="individual" class="individual section">
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-lg-6">
             <h2>Тренировки</h2>
             <div class="accordion" id="accordion"></div>
           </div>
-          <div class="col-md-6 circle-gradient">
+          <div class="col-lg-6 circle-gradient">
             <img class="trainer-img" src="./assets/trainers/training.jpg" alt="" srcset="" />
           </div>
         </div>
       </div>
       <footer>
-        <div class="contacts section">
-          <div id="map" style="height: 600px"></div>
+        <div id="contacts" class="contacts section">
+          <div class="row">
+            <div class="col-lg-6 order-lg-2 contacts-info">
+              <h2>Контакты</h2>
+
+              <a class="contacts-info-item" href="mailto:zhelezokp@yandex.ru">zhelezokp<span>@yandex.ru</span></a>
+
+              <a class="contacts-info-item" target="_blank" href="https://yandex.ru/maps/21641/lobnja/?from=api-maps&ll=37.476757%2C56.016048&mode=routes&origin=jsapi_2_1_79&rtext=~56.016048%2C37.476757&rtt=pd&ruri=~&z=16"
+                >г. Лобня, улица Некрасова, 9Г</a
+              >
+              <a class="cbtn" href="tel:79687338393" style="font-size: 1.5rem"
+                >+7 (985) 343-33-57
+                <p style="margin: 0; padding: 0; color: inherit">Открыты с 08:00 до 23:00</p>
+              </a>
+            </div>
+            <div class="col-lg-6 order-lg-1">
+              <div id="map" style="height: 600px"></div>
+            </div>
+          </div>
         </div>
       </footer>
     </div>
@@ -229,12 +246,13 @@
         <div class="modal-content">
           <div class="modal-body d-flex flex-column">
             <div class="row align-items-end">
-              <div class="col-lg-5" id="service-img"></div>
+              <div class="d-none d-lg-block col-lg-5" id="service-img"></div>
               <div class="col-lg-7">
                 <a class="cbtn" href="tel:79687338393" style="font-size: 1.5rem"
                   >+7 (985) 343-33-57
                   <p style="margin: 0; padding: 0; color: inherit">с 08:00 до 23:00</p>
                 </a>
+                <h3 id="trainer-name"></h3>
                 <div class="modal-item" id="service-description">2</div>
               </div>
             </div>

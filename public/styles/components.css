@@ -13,11 +13,12 @@
   background: none;
   border: 0;
 }
-@media screen and (max-width: 991px) {
-  .modal-content #service-description {
-    max-height: 400px;
-    overflow: auto;
-  }
+.modal-content #service-description {
+  max-height: 400px;
+  overflow: auto;
+}
+.modal-content #trainer-name {
+  color: #fff;
 }
 .modal-content .modal-body {
   gap: 24px;
@@ -61,6 +62,7 @@
 }
 .modal-content .row .modal-form {
   display: inline-block;
+  text-align: center;
 }
 
 .cbtn,
@@ -327,7 +329,11 @@ nav ul li {
   width: -moz-max-content !important;
   width: max-content !important;
 }
+.layout .individual .row {
+  justify-content: center;
+}
 .layout .individual .circle-gradient {
+  max-width: 550px;
   position: relative;
 }
 .layout .individual .circle-gradient::before {
@@ -344,8 +350,31 @@ nav ul li {
 }
 .layout .contacts {
   margin-bottom: 10rem;
-  border-radius: 20px;
+}
+.layout .contacts-info {
+  margin-bottom: 5rem;
+  text-align: right;
+  color: #fff;
+}
+.layout .contacts-info > *:not(:last-child) {
+  margin-bottom: 1.5rem !important;
+}
+.layout .contacts-info-item {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+.layout .contacts-info-item span {
+  color: #faff00;
+}
+.layout .contacts #map {
   overflow: hidden;
+  border-radius: 20px;
+}
+@media screen and (max-width: 721px) {
+  .layout .contacts #map {
+    height: 400px !important;
+  }
 }
 
 img {

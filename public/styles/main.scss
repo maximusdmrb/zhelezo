@@ -2,6 +2,7 @@
 @import url("./components.css"); /*# sourceMappingURL=main.css.map */
 @import url("./customAccordion.css"); /*# sourceMappingURL=main.css.map */
 @import url("./owl.carousel.min.css"); /*# sourceMappingURL=main.css.map */
+$main-color: #faff00;
 
 // variables
 $layout-width: calc(1160px + 2rem * 2);
@@ -48,4 +49,21 @@ input::-webkit-inner-spin-button {
   /* display: none; <- Crashes Chrome on hover */
   -webkit-appearance: none;
   margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+* {
+  /* плашка-бегунок и фон */
+  scrollbar-color: $main-color transparent;
+}
+*::-webkit-scrollbar {
+  width: 5px; /* в основном для вертикальных полос прокрутки */
+  height: 5px; /* в основном для горизонтальных полос прокрутки */
+}
+*::-webkit-scrollbar-thumb {
+  /* плашка-бегунок */
+  background: $main-color;
+  border-radius: 3px;
+}
+*::-webkit-scrollbar-track {
+  /* фон */
+  background: transparent;
 }
