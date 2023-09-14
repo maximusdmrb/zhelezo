@@ -9,6 +9,7 @@
     />
     <title>"Железо" - тренажерный зал</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10.2.0/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./styles/main.css" />
     <script src="https://api-maps.yandex.ru/2.1/?apikey=a6e0d918-5ee1-4bc2-9d86-0fe7bb97a683&lang=ru_RU"></script>
     <script>
@@ -76,58 +77,54 @@
             </p> -->
           </div>
           <div class="gallery col-lg-7">
-            <div class="owl-carousel owl-carousel-gallery owl-theme owl-loaded">
-              <div class="owl-stage-outer">
-                <div class="owl-stage">
-                  <div class="owl-item">
-                    <img class="owl-lazy" data-src="./assets/gallery/1.jpg" alt="" srcset="" />
-                  </div>
-                  <div class="owl-item">
-                    <img class="owl-lazy" data-src="./assets/gallery/2.jpg" alt="" srcset="" />
-                  </div>
-                  <div class="owl-item">
-                    <img class="owl-lazy" data-src="./assets/gallery/3.jpg" alt="" srcset="" />
-                  </div>
-                  <div class="owl-item">
-                    <img class="owl-lazy" data-src="./assets/gallery/4.jpg" alt="" srcset="" />
-                  </div>
-                  <div class="owl-item">
-                    <img class="owl-lazy" data-src="./assets/gallery/5.jpg" alt="" srcset="" />
-                  </div>
-                  <div class="owl-item">
-                    <img class="owl-lazy" data-src="./assets/gallery/6.jpg" alt="" srcset="" />
-                  </div>
-                  <div class="owl-item">
-                    <img class="owl-lazy" data-src="./assets/gallery/7.jpg" alt="" srcset="" />
-                  </div>
-                  <div class="owl-item">
-                    <img class="owl-lazy" data-src="./assets/gallery/8.jpg" alt="" srcset="" />
-                  </div>
-                  <div class="owl-item">
-                    <img class="owl-lazy" data-src="./assets/gallery/9.jpg" alt="" srcset="" />
-                  </div>
-                  <div class="owl-item">
-                    <img class="owl-lazy" data-src="./assets/gallery/10.jpg" alt="" srcset="" />
-                  </div>
-                  <div class="owl-item">
-                    <img class="owl-lazy" data-src="./assets/gallery/11.jpg" alt="" srcset="" />
-                  </div>
-                  <div class="owl-item">
-                    <img class="owl-lazy" data-src="./assets/gallery/12.jpg" alt="" srcset="" />
-                  </div>
-                  <div class="owl-item">
-                    <img class="owl-lazy" data-src="./assets/gallery/13.jpg" alt="" srcset="" />
-                  </div>
-                  <div class="owl-item">
-                    <img class="owl-lazy" data-src="./assets/gallery/0.jpg" alt="" srcset="" />
-                  </div>
+            <div class="swiper swiper-gallery">
+              <div class="pagination-gallery"></div>
+
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="./assets/gallery/1.jpg" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./assets/gallery/2.jpg" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./assets/gallery/3.jpg" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./assets/gallery/4.jpg" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./assets/gallery/5.jpg" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./assets/gallery/7.jpg" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./assets/gallery/8.jpg" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./assets/gallery/9.jpg" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./assets/gallery/10.jpg" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./assets/gallery/11.jpg" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./assets/gallery/12.jpg" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./assets/gallery/13.jpg" />
                 </div>
               </div>
-              <div class="owl-gav">
-                <div class="customPrevBtn" style="transform: rotate(180deg); margin-right: 1rem">
-                  <img src="./assets/arrow.svg" alt="" srcset="" />
+              <div class="nav-gallery">
+                <div class="gallery-prev">
+                  <img height="20" width="20" style="transform: rotateY(180deg); margin-right: 1rem" src="./assets/arrow.svg" />
                 </div>
-                <div class="customNextBtn"><img src="./assets/arrow.svg" alt="" srcset="" /></div>
+                <div class="gallery-next">
+                  <img height="20" width="20" src="./assets/arrow.svg" />
+                </div>
               </div>
             </div>
           </div>
@@ -180,30 +177,68 @@
           </div>
         </div>
       </div>
+      <div id="arm" class="arm section">
+        <h2>Единственные в городе</h2>
+        <!-- Slider main container -->
+        <div class="swiper swiper-arm">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide"><img src="./assets/arm/1.jpg" alt="" srcset="" /></div>
+            <div class="swiper-slide"><img src="./assets/arm/2.jpg" alt="" srcset="" /></div>
+            <div class="swiper-slide"><img src="./assets/arm/3.jpg" alt="" srcset="" /></div>
+            <div class="swiper-slide"><img src="./assets/arm/4.jpg" alt="" srcset="" /></div>
+          </div>
+          <!-- If we need pagination -->
+        </div>
+        <div class="pagination-arm"></div>
+      </div>
+
       <div id="cards" class="price section">
         <h2>Клубные карты</h2>
-        <div class="owl-carousel owl-carousel-unlimited owl-theme owl-loaded">
-          <div class="owl-stage-outer">
-            <div class="owl-stage prices-unlimited"></div>
-          </div>
-        </div>
-        <div class="owl-carousel owl-carousel-daytime owl-theme owl-loaded">
-          <div class="owl-stage-outer">
-            <div class="owl-stage prices-daytime"></div>
-          </div>
-        </div>
-        <div class="owl-carousel owl-carousel-childlike owl-theme owl-loaded">
-          <div class="owl-stage-outer">
-            <div class="owl-stage prices-childlike"></div>
-          </div>
-        </div>
+        <div class="swiper swiper-unlimited"><div class="swiper-wrapper"></div></div>
+        <div class="swiper swiper-daytime"><div class="swiper-wrapper"></div></div>
+        <div class="swiper swiper-childlike"><div class="swiper-wrapper"></div></div>
       </div>
       <div id="trainers" class="trainers section">
         <h2>Тренерский состав</h2>
         <div class="trainers-list"></div>
-        <div class="owl-carousel owl-carousel-trainers owl-theme owl-loaded">
-          <div class="owl-stage-outer">
-            <div class="owl-stage owl-trainers-list"></div>
+        <div class="swiper swiper-trainers">
+          <div class="swiper-wrapper"></div>
+        </div>
+        <div class="modal fade" id="modal" aria-modal="true" aria-hidden="true" aria-labelledby="trainer-name" tabindex="-1">
+          <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+              <div class="modal-body d-flex flex-column">
+                <div class="row align-items-center">
+                  <div class="d-none d-lg-block col-lg-5" id="service-img"></div>
+                  <div class="col-lg-7 inform-group">
+                    <div class="d-flex justify-content-between align-items-start">
+                      <a class="cbtn" href="tel:79687338393" style="font-size: 1.5rem"
+                        >+7 (985) 343-33-57
+                        <p style="margin: 0; padding: 0; color: inherit">с 08:00 до 23:00</p>
+                      </a>
+                      <div class="close-modal"><div>+</div></div>
+                    </div>
+
+                    <div class="modal-item">
+                      <h3 id="trainer-name"></h3>
+                      <div id="service-description"></div>
+                    </div>
+                    <div class="modal-item modal-form">
+                      <form>
+                        <div class="input-group">
+                          <span class="input-group-text" id="basic-addon1">+7</span>
+                          <input type="number" class="form-control" maxlength="1" pattern="[0-9]{10}" placeholder="987 654 43 21" aria-label="tel" aria-describedby="basic-addon1" />
+                        </div>
+
+                        <input class="cbtn discount" type="submit" value="Заказать звонок" />
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -241,52 +276,15 @@
         </div>
       </footer>
     </div>
-    <div class="modal fade" id="modal" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
-      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
-        <div class="modal-content">
-          <div class="modal-body d-flex flex-column">
-            <div class="row align-items-end">
-              <div class="d-none d-lg-block col-lg-5" id="service-img"></div>
-              <div class="col-lg-7">
-                <a class="cbtn" href="tel:79687338393" style="font-size: 1.5rem"
-                  >+7 (985) 343-33-57
-                  <p style="margin: 0; padding: 0; color: inherit">с 08:00 до 23:00</p>
-                </a>
-                <h3 id="trainer-name"></h3>
-                <div class="modal-item" id="service-description">2</div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col">
-                <div class="modal-item modal-form">
-                  <form action="/public/index.html" method="post">
-                    <div class="row">
-                      <div class="col-lg-6">
-                        <div class="input-group">
-                          <span class="input-group-text" id="basic-addon1">+7</span>
-                          <input type="number" class="form-control" maxlength="1" pattern="[0-9]{10}" placeholder="987 654 43 21" aria-label="tel" aria-describedby="basic-addon1" />
-                        </div>
-                      </div>
-                      <div class="col-lg-6"><input class="cbtn discount" type="submit" value="Заказать звонок" /></div>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./js/asyncText.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
-    <script src="./js/owl.carousel.min.js"></script>
     <script type="module" src="./js/renderPrices.js"></script>
     <script type="module" src="./js/renderTrainers.js"></script>
     <script type="module" src="./js/renderTraining.js"></script>
     <script type="module" src="./js/nav.js"></script>
     <script type="module" src="./js/modal.js"></script>
-    <script src="./js/carousel.js"></script>
+    <script type="module" src="./js/carousel.js"></script>
   </body>
 </html>

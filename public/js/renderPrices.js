@@ -1,10 +1,11 @@
 import { prices } from "./config.js";
 
-const unlimited = document.querySelector(".prices-unlimited");
-const daytime = document.querySelector(".prices-daytime");
-const childlike = document.querySelector(".prices-childlike");
+const unlimited = document.querySelector(".swiper-unlimited").querySelector(".swiper-wrapper");
+const daytime = document.querySelector(".swiper-daytime").querySelector(".swiper-wrapper");
+const childlike = document.querySelector(".swiper-childlike").querySelector(".swiper-wrapper");
 
-const html = (price) => `<div class="owl-item">
+const html = (price) => `
+<div class="swiper-slide">
 <div class="price-card ${price.status === "pro" ? "active" : ""} ${price.status === false ? "one" : ""} ${price.status === "discount" ? "discount" : ""}">
   <div>
     <h5>${price.name}</h5>

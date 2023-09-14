@@ -12,8 +12,9 @@
 .modal-content {
   background: none;
   border: 0;
+  overflow: hidden;
 }
-.modal-content #service-description {
+.modal-content .modal-item {
   max-height: 400px;
   overflow: auto;
 }
@@ -28,7 +29,6 @@
 }
 .modal-content .modal-body .col-lg-7 .cbtn {
   font-size: 1rem !important;
-  margin-bottom: 1.5rem;
 }
 .modal-content .modal-body .col-lg-7 .cbtn p {
   color: #444 !important;
@@ -37,6 +37,11 @@
   border-radius: 1.5rem;
   width: 100%;
   max-width: 300px;
+}
+.modal-content .row .inform-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 .modal-content .row .modal-item {
   color: #fff;
@@ -60,9 +65,10 @@
   border-bottom: 1px solid #fff;
   color: #fff;
 }
-.modal-content .row .modal-form {
-  display: inline-block;
-  text-align: center;
+.modal-content .row .modal-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 .cbtn,
@@ -115,6 +121,7 @@ nav ul li {
     left: 0;
     width: 100vw;
     display: block;
+    font-size: 1.2rem;
     border-radius: 0 0 30px 30px;
     background: #faff00;
     padding: 0;
@@ -230,21 +237,14 @@ nav ul li {
 .layout .advantages .advantages-list-item ul li img {
   margin-right: 10px;
 }
-.layout .price {
-  /* .owl-stage::before {
-    content: "";
-    position: absolute;
-    width: 90%;
-    top: calc(50% - 4px);
-    height: 4px;
-    background: #ccc;
-  } */
-}
-.layout .price .owl-stage-outer {
+.layout .price .swiper {
   overflow: visible;
-}
-.layout .price .owl-carousel {
   margin-bottom: 2rem;
+}
+.layout .price .swiper-slide {
+  width: auto;
+  margin-right: 0 !important;
+  padding-right: 1rem;
 }
 .layout .price-card {
   width: 219.2px;
@@ -279,14 +279,14 @@ nav ul li {
     text-align: center;
   }
 }
-.layout .trainers .owl-carousel-trainers {
+.layout .trainers .swiper-trainers {
   display: none;
 }
 @media screen and (max-width: 910px) {
   .layout .trainers h2 {
     text-align: left;
   }
-  .layout .trainers .owl-carousel-trainers {
+  .layout .trainers .swiper-trainers {
     display: block;
   }
   .layout .trainers .trainers-list {
@@ -322,12 +322,15 @@ nav ul li {
   max-width: 13.875rem;
   pointer-events: none;
 }
-.layout .trainers .owl-stage-outer {
-  overflow: visible;
+.layout .trainers .close-modal {
+  padding: 10px;
+  color: #fff;
+  font-size: 3rem;
+  line-height: 10px;
+  cursor: pointer;
 }
-.layout .trainers .owl-trainers-list {
-  width: -moz-max-content !important;
-  width: max-content !important;
+.layout .trainers .close-modal div {
+  transform: rotateZ(45deg);
 }
 .layout .individual .row {
   justify-content: center;
@@ -390,4 +393,61 @@ img {
 }
 .discount p {
   color: #eee !important;
+}
+
+.swiper {
+  position: relative;
+}
+.swiper .nav-gallery {
+  display: flex;
+  margin-top: 1rem;
+  justify-content: end;
+}
+.swiper .nav-gallery img {
+  width: auto;
+}
+.swiper img {
+  border-radius: 1.5rem;
+  width: 100%;
+}
+
+.pagination-gallery {
+  position: relative;
+  margin-bottom: 1rem;
+  z-index: 1;
+}
+.pagination-gallery .swiper-pagination-progressbar-fill {
+  border-radius: 2px;
+  background: #faff00;
+}
+
+.pagination-arm {
+  margin-top: 1rem;
+}
+.pagination-arm .swiper-pagination-bullet {
+  width: 2.5rem;
+  height: 0.25rem;
+  text-align: center;
+  background: #fff !important;
+  font-size: 12px;
+  opacity: 1;
+  border-radius: 2px;
+}
+.pagination-arm .swiper-pagination-bullet-active {
+  background: #faff00 !important;
+}
+.pagination-arm .swiper-lazy-preloader {
+  height: 100%;
+}
+
+.price .swiper,
+.trainers .swiper {
+  overflow: visible;
+  margin-bottom: 2rem;
+}
+.price .swiper-slide,
+.trainers .swiper-slide {
+  width: auto;
+  margin-right: 0 !important;
+  padding-right: 1rem;
 }/*# sourceMappingURL=components.css.map */

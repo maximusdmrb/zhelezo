@@ -1,40 +1,56 @@
-$(document).ready(function () {
-  let owl = $(".owl-carousel-gallery");
-  owl.owlCarousel({
-    items: 1,
-    lazyLoad: true,
-    center: true,
-    loop: true,
-    autoplay: true,
-    lazyLoadEager: 1,
-  });
-  $(".customNextBtn").click(function () {
-    owl.trigger("next.owl.carousel");
-  });
-  // Go to the previous item
-  $(".customPrevBtn").click(function () {
-    // With optional speed parameter
-    // Parameters has to be in square bracket '[]'
-    owl.trigger("prev.owl.carousel", [300]);
-  });
+import Swiper from "https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.mjs";
 
-  const option = {
-    nav: false,
-    margin: 16,
-    dots: false,
-    autoWidth: true,
-    checkVisible: false,
-  };
+new Swiper(".swiper-gallery", {
+  grabCursor: true,
+  navigation: {
+    nextEl: ".gallery-next",
+    prevEl: ".gallery-prev",
+  },
+  loop: true,
+  effect: "creative",
+  creativeEffect: {
+    prev: {
+      shadow: true,
+      translate: ["-120%", 0, -500],
+    },
+    next: {
+      shadow: true,
+      translate: ["120%", 0, -500],
+    },
+  },
+  pagination: {
+    el: ".pagination-gallery",
+    type: "progressbar",
+  },
+});
 
-  $(".owl-carousel-unlimited").owlCarousel(option);
-  $(".owl-carousel-daytime").owlCarousel(option);
-  $(".owl-carousel-childlike").owlCarousel(option);
+const priceSwipeConf = {
+  slidesPerView: "auto",
+};
+new Swiper(".swiper-unlimited", priceSwipeConf);
+new Swiper(".swiper-daytime", priceSwipeConf);
+new Swiper(".swiper-childlike", priceSwipeConf);
 
-  $(".owl-carousel-trainers").owlCarousel({
-    margin: 16,
-    nav: false,
-    // loop: true,
-    dots: false,
-    autoWidth: true,
-  });
+new Swiper(".swiper-trainers", priceSwipeConf);
+
+new Swiper(".swiper-arm", {
+  grabCursor: true,
+  effect: "creative",
+  loop: true,
+  creativeEffect: {
+    prev: {
+      shadow: true,
+      translate: [0, 0, -400],
+    },
+    next: {
+      translate: ["100%", 0, 0],
+    },
+  },
+  pagination: {
+    el: ".pagination-arm",
+    clickable: true,
+    renderBullet: function (index, className) {
+      return `<div class="${className}"></div>`;
+    },
+  },
 });

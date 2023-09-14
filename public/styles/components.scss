@@ -10,8 +10,9 @@ $main-color: #faff00;
 .modal-content {
   background: none;
   border: 0;
+  overflow: hidden;
 
-  #service-description {
+  .modal-item {
     max-height: 400px;
     overflow: auto;
   }
@@ -23,7 +24,6 @@ $main-color: #faff00;
       margin-top: 1.5rem;
       .cbtn {
         font-size: 1rem !important;
-        margin-bottom: 1.5rem;
         p {
           color: #444 !important;
         }
@@ -37,6 +37,11 @@ $main-color: #faff00;
     }
   }
   .row {
+    .inform-group {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
     .modal-item {
       color: #fff;
       background: #222;
@@ -59,8 +64,11 @@ $main-color: #faff00;
       }
     }
     .modal-form {
-      display: inline-block;
-      text-align: center;
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+      }
     }
   }
 }
@@ -115,6 +123,7 @@ nav {
       left: 0;
       width: 100vw;
       display: block;
+      font-size: 1.2rem;
       border-radius: 0 0 30px 30px;
       background: $main-color;
       padding: 0;
@@ -229,20 +238,16 @@ nav {
       }
     }
   }
+
   .price {
-    /* .owl-stage::before {
-      content: "";
-      position: absolute;
-      width: 90%;
-      top: calc(50% - 4px);
-      height: 4px;
-      background: #ccc;
-    } */
-    .owl-stage-outer {
+    .swiper {
       overflow: visible;
-    }
-    .owl-carousel {
       margin-bottom: 2rem;
+      &-slide {
+        width: auto;
+        margin-right: 0 !important;
+        padding-right: 1rem;
+      }
     }
     &-card {
       width: 219.2px;
@@ -281,14 +286,14 @@ nav {
         text-align: center;
       }
     }
-    .owl-carousel-trainers {
+    .swiper-trainers {
       display: none;
     }
     @media screen and (max-width: 910px) {
       h2 {
         text-align: left;
       }
-      .owl-carousel-trainers {
+      .swiper-trainers {
         display: block;
       }
       .trainers-list {
@@ -324,11 +329,17 @@ nav {
         }
       }
     }
-    .owl-stage-outer {
-      overflow: visible;
-    }
-    .owl-trainers-list {
-      width: max-content !important;
+    .close-modal {
+      padding: 10px;
+      color: #fff;
+
+      font-size: 3rem;
+
+      line-height: 10px;
+      cursor: pointer;
+      div {
+        transform: rotateZ(45deg);
+      }
     }
   }
   .individual {
@@ -392,5 +403,65 @@ img {
   }
   p {
     color: #eee !important;
+  }
+}
+
+.swiper {
+  // width: 600px;
+  // height: 500px;
+  position: relative;
+  .nav-gallery {
+    display: flex;
+    margin-top: 1rem;
+    justify-content: end;
+    img {
+      width: auto;
+    }
+  }
+
+  img {
+    border-radius: 1.5rem;
+    width: 100%;
+    // height: 100%;
+  }
+}
+.pagination-gallery {
+  position: relative;
+  margin-bottom: 1rem;
+  z-index: 1;
+  .swiper-pagination-progressbar-fill {
+    border-radius: 2px;
+    background: $main-color;
+  }
+}
+.pagination-arm {
+  margin-top: 1rem;
+  .swiper-pagination-bullet {
+    width: 2.5rem;
+    height: 0.25rem;
+    text-align: center;
+    background: #fff !important;
+    font-size: 12px;
+    opacity: 1;
+    border-radius: 2px;
+  }
+
+  .swiper-pagination-bullet-active {
+    background: $main-color !important;
+  }
+  .swiper-lazy-preloader {
+    height: 100%;
+  }
+}
+.price,
+.trainers {
+  .swiper {
+    overflow: visible;
+    margin-bottom: 2rem;
+    &-slide {
+      width: auto;
+      margin-right: 0 !important;
+      padding-right: 1rem;
+    }
   }
 }

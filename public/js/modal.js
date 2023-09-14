@@ -1,9 +1,7 @@
 for (const service of [...document.querySelectorAll('[data-bs-toggle="modal"]')]) {
   service.addEventListener("click", function ({ target }) {
-    const { service } = this.dataset;
     const { json } = this.dataset;
     const { name, description, src } = JSON.parse(json);
-    console.log(name);
     switch (this.dataset.service) {
       case "trainer":
         const img = document.createElement("img");
@@ -14,6 +12,16 @@ for (const service of [...document.querySelectorAll('[data-bs-toggle="modal"]')]
         document.querySelector("#service-description").innerHTML = description;
         document.querySelector("#trainer-name").innerHTML = name;
     }
-    // bsOffcanvas.show();
   });
 }
+const myModalEl = document.getElementById("modal");
+myModalEl.addEventListener("show.bs.modal", () => {
+  document.querySelector("html").style.overflowY = "hidden";
+});
+myModalEl.addEventListener("hide.bs.modal", () => {
+  document.querySelector("html").style.overflowY = "auto";
+});
+const myModal = new bootstrap.Modal("#modal");
+document.querySelector(".close-modal").addEventListener("click", () => {
+  myModal.hide();
+});

@@ -35,16 +35,19 @@ for (const trainer of trainers) {
   );
 
   // Рендер карточек для мобилок
-  document.querySelector(".owl-trainers-list").insertAdjacentHTML(
-    "beforeend",
-    `<div class="owl-item"><div class="trainers-list-item" data-service="trainer" data-json='${JSON.stringify(trainer)}' data-bs-toggle="modal" data-bs-target="#modal">
+  document
+    .querySelector(".swiper-trainers")
+    .querySelector(".swiper-wrapper")
+    .insertAdjacentHTML(
+      "beforeend",
+      `<div class="swiper-slide"><div class="trainers-list-item" data-service="trainer" data-json='${JSON.stringify(trainer)}' data-bs-toggle="modal" data-bs-target="#modal">
     <img src="./assets/trainers/${trainer.src}" alt="" srcset="" />
     <h3>${trainer.name}</h3>
     <button class="cbtn small" type="button">
       Запись
     </button>
   </div></div>`
-  );
+    );
 }
 export const showTrainderCard = (name) => {
   console.log(trainers.find((trainer) => trainer.name == name));
