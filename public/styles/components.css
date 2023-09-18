@@ -1,3 +1,27 @@
+.policy {
+  color: #fff;
+  font-size: 0.8rem;
+}
+.policy span {
+  color: #faff00;
+}
+
+.logo a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.vk {
+  color: inherit;
+  text-decoration: none;
+}
+.vk svg {
+  fill: #fff;
+  height: 40px;
+  width: 40px;
+  margin-right: 10px;
+}
+
 .owl-nav,
 .owl-dots {
   display: none;
@@ -164,19 +188,24 @@ nav ul li {
   height: 129px;
 }
 
-.layout .about .gallery {
+.layout .about .gallery,
+.layout .arm .gallery {
   max-width: 600px;
 }
-.layout .about .gallery .owl-stage-outer {
+.layout .about .gallery .owl-stage-outer,
+.layout .arm .gallery .owl-stage-outer {
   border-radius: 0.625rem;
 }
-.layout .about .gallery .owl-gav {
+.layout .about .gallery .owl-gav,
+.layout .arm .gallery .owl-gav {
   display: flex;
   justify-content: end;
   margin-top: 1rem;
 }
 .layout .about .gallery .owl-gav .customPrevBtn,
-.layout .about .gallery .owl-gav .customNextBtn {
+.layout .about .gallery .owl-gav .customNextBtn,
+.layout .arm .gallery .owl-gav .customPrevBtn,
+.layout .arm .gallery .owl-gav .customNextBtn {
   cursor: pointer;
 }
 .layout .advantages h2 {

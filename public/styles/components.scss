@@ -1,4 +1,27 @@
 $main-color: #faff00;
+.policy {
+  color: #fff;
+  font-size: 0.8rem;
+  span {
+    color: $main-color;
+  }
+}
+.logo {
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+.vk {
+  color: inherit;
+  text-decoration: none;
+  svg {
+    fill: #fff;
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+  }
+}
 .owl-nav,
 .owl-dots {
   display: none;
@@ -163,7 +186,8 @@ nav {
   }
 }
 .layout {
-  .about {
+  .about,
+  .arm {
     .gallery {
       max-width: 600px;
 
